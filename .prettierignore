@@ -1,0 +1,10 @@
+# Ignore lockfile
+pnpm-lock.yaml
+
+# Optional: Ignore node_modules and build outputs
+node_modules
+dist
+build
+.next
+.out
+coverage
