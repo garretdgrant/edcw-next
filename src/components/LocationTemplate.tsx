@@ -81,7 +81,7 @@ const LocationTemplate = () => {
               What Makes Our {cityName} Web Design Services Different
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Lightning Fast Speed
                 </h3>
@@ -90,7 +90,7 @@ const LocationTemplate = () => {
                   engaged and improving your SEO rankings.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Local SEO Optimization
                 </h3>
@@ -99,7 +99,7 @@ const LocationTemplate = () => {
                   find your business when they need it most.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Mobile Responsive
                 </h3>
@@ -108,7 +108,7 @@ const LocationTemplate = () => {
                   customers searching on smartphones.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Clean, Modern Design
                 </h3>
@@ -117,7 +117,7 @@ const LocationTemplate = () => {
                   business&apos;s unique brand and values.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Conversion Focused
                 </h3>
@@ -126,7 +126,7 @@ const LocationTemplate = () => {
                   {cityName} visitors into paying customers.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="bg-white p-8 rounded-lg shadow-xs">
                 <h3 className="text-xl font-semibold mb-4 text-primary">
                   Local Business Focus
                 </h3>

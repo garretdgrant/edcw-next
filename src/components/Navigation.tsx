@@ -61,7 +61,7 @@ const Navigation = () => {
                   <DropdownMenuItem
                     key={location}
                     asChild
-                    className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-sm"
+                    className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-xs"
                   >
                     <Link
                       href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}

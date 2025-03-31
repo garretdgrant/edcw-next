@@ -39,7 +39,7 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
             We build websites that
             <br />
-            <span className="bg-gradient-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
               grow your business
             </span>
           </h1>
