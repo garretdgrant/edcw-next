@@ -1,103 +1,267 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import {
+  ArrowRight,
+  Check,
+  ChevronDown,
+  Code,
+  Layout as LayoutIcon,
+  Zap,
+} from "lucide-react";
+
+export default function HomePage() {
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+
+  const portfolioItems = [
+    {
+      title: "Mountain Café",
+      description: "Responsive website for a local coffee shop",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    },
+    {
+      title: "Harbor Real Estate",
+      description: "Property listing site with advanced search",
+      image: "https://images.unsplash.com/photo-1551038247-3d9af20df552",
+    },
+    {
+      title: "Bloom Florists",
+      description: "E-commerce platform with delivery scheduling",
+      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="pt-16">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-6 lg:px-8 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl text-center">
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
+            We build websites that
+            <br />
+            <span className="bg-gradient-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
+              grow your business
+            </span>
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-secondary mb-8">
+            Beautiful, fast-loading, and SEO-friendly websites custom-tailored
+            for small business owners looking to make a big impact online.
+          </p>
+          <div className="flex justify-center gap-4">
+            <button className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors">
+              Get a Free Quote
+            </button>
+            <button className="px-6 py-3 glass rounded-full hover:bg-white/20 transition-colors flex items-center gap-2">
+              See Our Work <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Hero Image */}
+        <div className="relative mt-16">
+          <div className="flex justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              alt="Modern web design workspace"
+              className="rounded-3xl shadow-2xl max-w-[90%] w-auto h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 bg-surface px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Services tailored for your success
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Website Design",
+                description:
+                  "Beautiful, responsive websites that look great on all devices",
+                icon: <LayoutIcon className="w-8 h-8" />,
+              },
+              {
+                title: "SEO Optimization",
+                description:
+                  "Get found online with our proven search engine optimization strategies",
+                icon: <Zap className="w-8 h-8" />,
+              },
+              {
+                title: "Custom Development",
+                description:
+                  "Tailored solutions with clean code for your specific business needs",
+                icon: <Code className="w-8 h-8" />,
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-background border border-border hover:border-accent transition-colors"
+              >
+                <div className="mb-4 text-primary">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-secondary">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-24 px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Our Recent Work
+          </h2>
+          <p className="text-secondary text-center max-w-2xl mx-auto mb-16">
+            Take a look at some of the projects we've successfully delivered
+            for our clients
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
+              >
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
+                  <p className="text-secondary">{item.description}</p>
+                  <button className="mt-4 text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                    View Project <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <button className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors">
+              View All Projects
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With Us Section */}
+      <section className="py-24 bg-primary text-white px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center">
+            Why Work With Us
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Fast-Loading Sites",
+                description:
+                  "We optimize every aspect of your website to ensure lightning-fast loading times that keep visitors engaged.",
+              },
+              {
+                title: "SEO Best Practices",
+                description:
+                  "Every website we build follows SEO best practices to help your business rank higher in search results.",
+              },
+              {
+                title: "Clean, Modern Design",
+                description:
+                  "Our designs are not just beautiful—they're intuitive and focused on delivering results for your business.",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-accent text-primary mb-4">
+                  <Check className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-white/80">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "How long does it take to build a website?",
+                answer:
+                  "Most projects take 2-6 weeks depending on complexity. We'll provide a detailed timeline during our consultation.",
+              },
+              {
+                question: "What's your pricing structure?",
+                answer:
+                  "Our pricing is project-based and transparent with no hidden fees. We provide detailed quotes after understanding your specific needs.",
+              },
+              {
+                question: "Do you offer website maintenance?",
+                answer:
+                  "Yes, we offer ongoing maintenance packages to keep your site secure, updated, and performing at its best.",
+              },
+            ].map((faq, index) => (
+              <div
+                key={index}
+                className="border border-border rounded-lg overflow-hidden"
+              >
+                <button
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-background/50"
+                  onClick={() =>
+                    setActiveAccordion(
+                      activeAccordion === index ? null : index
+                    )
+                  }
+                >
+                  <span className="font-medium">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 transition-transform ${
+                      activeAccordion === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeAccordion === index && (
+                  <div className="px-6 py-4 bg-background/50">
+                    <p className="text-secondary">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-primary text-white px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl text-center">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-8">
+            Ready to transform your online presence?
+          </h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+            Let's work together to build a website that truly represents your
+            business and drives real results.
+          </p>
+          <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
+            Let's Build Together
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }
