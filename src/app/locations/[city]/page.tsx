@@ -99,8 +99,8 @@ export default async function LocationPage({ params }: Props) {
               deliver premium quality without the premium price tag.
             </p>
             <p className="mb-8">
-              Whether you&apos;re launching or refreshing, our {cityName}-based team
-              is here to help you stand out.
+              Whether you&apos;re launching or refreshing, our {cityName}-based
+              team is here to help you stand out.
             </p>
           </div>
         </section>

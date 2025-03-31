@@ -8,6 +8,7 @@ import {
 } from "./ui/dropdown-menu";
 import { ChevronDown, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import Image from "next/image";
 
 const Navigation = () => {
   const locations = [
@@ -21,8 +22,18 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-semibold">
-          EDC Web Design
+        <Link
+          href="/"
+          className="flex items-center space-x-2 text-xl font-semibold"
+        >
+          <Image
+            src="/assets/logo.webp"
+            alt="EDC Web Design logo"
+            width={40}
+            height={40}
+            priority
+          />
+          <span>EDC Web Design</span>
         </Link>
 
         {/* Desktop Navigation */}

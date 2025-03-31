@@ -15,9 +15,9 @@ export default function HomePage() {
 
   const portfolioItems = [
     {
-      title: "Mountain Café",
+      title: "Ogden Construction",
       description: "Responsive website for a local coffee shop",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "/assets/locations/sacramento.webp",
     },
     {
       title: "Harbor Real Estate",
