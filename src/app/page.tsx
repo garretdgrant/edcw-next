@@ -101,9 +101,7 @@ export default function HomePage() {
                 className="p-6 rounded-2xl bg-background border border-border hover:border-accent transition-colors"
               >
                 <div className="mb-4 text-primary">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">
-                  {service.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-secondary">{service.description}</p>
               </div>
             ))}
@@ -118,8 +116,8 @@ export default function HomePage() {
             Our Recent Work
           </h2>
           <p className="text-secondary text-center max-w-2xl mx-auto mb-16">
-            Take a look at some of the projects we&apos;ve successfully delivered
-            for our clients
+            Take a look at some of the projects we&apos;ve successfully
+            delivered for our clients
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
@@ -183,9 +181,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-full flex items-center justify-center bg-accent text-primary mb-4">
                   <Check className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  {feature.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-white/80">{feature.description}</p>
               </div>
             ))}
@@ -224,9 +220,7 @@ export default function HomePage() {
                 <button
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-background/50"
                   onClick={() =>
-                    setActiveAccordion(
-                      activeAccordion === index ? null : index
-                    )
+                    setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
                   <span className="font-medium">{faq.question}</span>
@@ -254,8 +248,8 @@ export default function HomePage() {
             Ready to transform your online presence?
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Let&apos;s work together to build a website that truly represents your
-            business and drives real results.
+            Let&apos;s work together to build a website that truly represents
+            your business and drives real results.
           </p>
           <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
             Let&apos;s Build Together
