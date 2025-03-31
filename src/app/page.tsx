@@ -118,7 +118,7 @@ export default function HomePage() {
             Our Recent Work
           </h2>
           <p className="text-secondary text-center max-w-2xl mx-auto mb-16">
-            Take a look at some of the projects we've successfully delivered
+            Take a look at some of the projects we&apos;ve successfully delivered
             for our clients
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -254,11 +254,11 @@ export default function HomePage() {
             Ready to transform your online presence?
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Let's work together to build a website that truly represents your
+            Let&apos;s work together to build a website that truly represents your
             business and drives real results.
           </p>
           <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
-            Let's Build Together
+            Let&apos;s Build Together
           </button>
         </div>
       </section>
