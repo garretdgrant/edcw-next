@@ -270,9 +270,12 @@ export default function HomePage() {
             Let&apos;s work together to build a website that truly represents
             your business and drives real results.
           </p>
-          <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
+          <Link
+            href="/contact"
+            className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
+          >
             Let&apos;s Build Together
-          </button>
+          </Link>
         </div>
       </section>
     </main>
