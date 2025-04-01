@@ -43,15 +43,15 @@ export default function HomePage() {
       <section className="relative overflow-hidden px-6 lg:px-8 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
-            We build websites that
+            Custom websites designed to
             <br />
             <span className="bg-linear-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
-              grow your business
+              grow your small business
             </span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-secondary mb-8">
-            Beautiful, fast-loading, and SEO-friendly websites custom-tailored
-            for small business owners looking to make a big impact online.
+            We create fast, SEO-optimized websites tailored for small businesses
+            that want to grow online and stand out.
           </p>
           <div className="flex justify-center gap-4">
             <Link
@@ -85,26 +85,26 @@ export default function HomePage() {
       <section className="py-24 bg-surface px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Services tailored for your success
+            Web Design, SEO, and Development Services for Small Businesses
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Website Design",
                 description:
-                  "Beautiful, responsive websites that look great on all devices",
+                  "Custom, mobile-friendly website design that looks great on every device and drives engagement",
                 icon: <LayoutIcon className="w-8 h-8" />,
               },
               {
                 title: "SEO Optimization",
                 description:
-                  "Get found online with our proven search engine optimization strategies",
+                  "Boost your Google rankings with expert SEO strategies tailored to small businesses",
                 icon: <Zap className="w-8 h-8" />,
               },
               {
                 title: "Custom Development",
                 description:
-                  "Tailored solutions with clean code for your specific business needs",
+                  "Scalable web development with clean, hand-coded solutions—no templates, fully tailored to your business goals",
                 icon: <Code className="w-8 h-8" />,
               },
             ].map((service, index) => (
@@ -173,24 +173,24 @@ export default function HomePage() {
       <section className="py-24 bg-primary text-white px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center">
-            Why Work With Us
+            Why Choose Our Web Design Services
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 title: "Fast-Loading Sites",
                 description:
-                  "We optimize every aspect of your website to ensure lightning-fast loading times that keep visitors engaged.",
+                  "We hand-optimize your website for speed using best practices in performance and Core Web Vitals—ensuring fast load times and better SEO rankings.",
               },
               {
                 title: "SEO Best Practices",
                 description:
-                  "Every website we build follows SEO best practices to help your business rank higher in search results.",
+                  "Every site we build follows on-page SEO best practices—optimized headings, meta tags, and clean structure—to help your business rank higher on Google.",
               },
               {
                 title: "Clean, Modern Design",
                 description:
-                  "Our designs are not just beautiful—they're intuitive and focused on delivering results for your business.",
+                  "Our websites are clean, modern, and mobile-responsive—designed for great user experience, high conversions, and long-term brand credibility.",
               },
             ].map((feature, index) => (
               <div
@@ -219,17 +219,17 @@ export default function HomePage() {
               {
                 question: "How long does it take to build a website?",
                 answer:
-                  "Most projects take 2-6 weeks depending on complexity. We'll provide a detailed timeline during our consultation.",
+                  "Most websites are completed within 1–2 weeks, depending on the scope and features required. During your consultation, we’ll outline a clear timeline to ensure your website is delivered efficiently and meets your business goals.",
               },
               {
                 question: "What's your pricing structure?",
                 answer:
-                  "Our pricing is project-based and transparent with no hidden fees. We provide detailed quotes after understanding your specific needs.",
+                  "We offer transparent, project-based pricing with no hidden fees. Our most popular plans include flexible monthly and annual options, with enhanced features like SEO, performance reports, and ongoing support. We also offer custom website packages tailored to your business goals. Check out the Pricing page in the navigation for full details.",
               },
               {
                 question: "Do you offer website maintenance?",
                 answer:
-                  "Yes, we offer ongoing maintenance packages to keep your site secure, updated, and performing at its best.",
+                  "Yes, website maintenance is included in all of our plans. We provide ongoing support to keep your site secure, up to date, and running smoothly—ensuring optimal performance, SEO health, and a seamless user experience.",
               },
             ].map((faq, index) => (
               <div
@@ -264,7 +264,7 @@ export default function HomePage() {
       <section className="py-24 bg-primary text-white px-6 lg:px-8">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="text-3xl sm:text-5xl font-bold mb-8">
-            Ready to transform your online presence?
+            Ready to launch a custom website that grows your business?
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             Let&apos;s work together to build a website that truly represents
@@ -274,7 +274,7 @@ export default function HomePage() {
             href="/contact"
             className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
           >
-            Let&apos;s Build Together
+            Get My Free Quote
           </Link>
         </div>
       </section>
