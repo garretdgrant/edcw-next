@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const IMAGE_BASE_PATH = "/assets/homepage";
+export const HOMEPAGE_IMAGE_BASE_PATH = "/assets/homepage";
 
 export default function HomePage() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -20,19 +20,20 @@ export default function HomePage() {
     {
       title: "Ogden Construction",
       description:
-        "Custom marketing site for a deck and home remodeling contractor in Placerville, CA. Built for performance, SEO, and lead generation.",
-      image: `${IMAGE_BASE_PATH}/construction.webp`,
+        "High-performance website for a Placerville-based contractor. Designed to showcase services, boost SEO, and convert visitors into local leads.",
+      image: `${HOMEPAGE_IMAGE_BASE_PATH}/construction.webp`,
     },
     {
       title: "Snow White Cleaning",
       description:
-        "Booking-focused site for a residential and commercial cleaning company. Includes pricing, scheduling, and mobile-friendly design.",
-      image: `${IMAGE_BASE_PATH}/cleaning.webp`,
+        "Elegant marketing site for a professional cleaning company. Highlights services, builds trust, and drives inquiries through a clean, mobile-friendly layout.",
+      image: `${HOMEPAGE_IMAGE_BASE_PATH}/cleaning.webp`,
     },
     {
       title: "Alpine Diesel",
-      description: "E-commerce platform with delivery scheduling",
-      image: `${IMAGE_BASE_PATH}/mechanic.png`,
+      description:
+        "Bold and rugged design for a mobile diesel mechanic. Built to capture leads from fleet owners and off-road enthusiasts in need of on-site repairs.",
+      image: `${HOMEPAGE_IMAGE_BASE_PATH}/mechanic.png`,
     },
   ];
 
@@ -53,12 +54,18 @@ export default function HomePage() {
             for small business owners looking to make a big impact online.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors">
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            >
               Get a Free Quote
-            </button>
-            <button className="px-6 py-3 glass rounded-full hover:bg-white/20 transition-colors flex items-center gap-2">
+            </Link>
+            <Link
+              href="/portfolio"
+              className="px-6 py-3 glass rounded-full hover:bg-white/20 transition-colors flex items-center gap-2"
+            >
               See Our Work <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -152,9 +159,12 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <button className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors">
+            <Link
+              href="/portfolio"
+              className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors"
+            >
               View All Projects
-            </button>
+            </Link>
           </div>
         </div>
       </section>
