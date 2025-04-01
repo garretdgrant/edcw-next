@@ -5,7 +5,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import {
   Form,
   FormControl,
@@ -238,7 +237,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
