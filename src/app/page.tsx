@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export const HOMEPAGE_IMAGE_BASE_PATH = "/assets/homepage";
+const HOMEPAGE_IMAGE_BASE_PATH = "/assets/homepage";
 
 export default function HomePage() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
