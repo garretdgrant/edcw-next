@@ -9,6 +9,9 @@ import {
   Layout as LayoutIcon,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
+
+const IMAGE_BASE_PATH = "/assets/homepage";
 
 export default function HomePage() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -16,18 +19,20 @@ export default function HomePage() {
   const portfolioItems = [
     {
       title: "Ogden Construction",
-      description: "Responsive website for a local coffee shop",
-      image: "/assets/locations/sacramento.webp",
+      description:
+        "Custom marketing site for a deck and home remodeling contractor in Placerville, CA. Built for performance, SEO, and lead generation.",
+      image: `${IMAGE_BASE_PATH}/construction.webp`,
     },
     {
-      title: "Harbor Real Estate",
-      description: "Property listing site with advanced search",
-      image: "https://images.unsplash.com/photo-1551038247-3d9af20df552",
+      title: "Snow White Cleaning",
+      description:
+        "Booking-focused site for a residential and commercial cleaning company. Includes pricing, scheduling, and mobile-friendly design.",
+      image: `${IMAGE_BASE_PATH}/cleaning.webp`,
     },
     {
-      title: "Bloom Florists",
+      title: "Alpine Diesel",
       description: "E-commerce platform with delivery scheduling",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
+      image: `${IMAGE_BASE_PATH}/mechanic.png`,
     },
   ];
 
@@ -135,9 +140,13 @@ export default function HomePage() {
                 <div className="p-6">
                   <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
                   <p className="text-secondary">{item.description}</p>
-                  <button className="mt-4 text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                  <Link
+                    href="https://www.ogden-construction.com"
+                    target="_blank"
+                    className="mt-4 text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                  >
                     View Project <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
