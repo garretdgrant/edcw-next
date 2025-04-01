@@ -88,10 +88,12 @@ const Navigation = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" className="hidden md:inline-flex">
-            Contact
+          <Button variant="ghost" className="hidden md:inline-flex" asChild>
+            <Link href="/contact">Contact</Link>
           </Button>
-          <Button className="text-white">Get a Quote</Button>
+          <Button className="text-white" asChild>
+            <Link href="/contact">Get a Quote</Link>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
