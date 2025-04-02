@@ -1,394 +1,154 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const Pricing = () => {
-  const pricingPlanSinglePage = [
-    {
-      title: "Monthly",
-      setupFee: "$500",
-      monthlyCost: "$100",
-      upfrontPayment: "None",
-      totalDue: "$600",
-      savings: "—",
-      totalText: "(first month)",
-      popular: false,
-      features: [
-        "Custom responsive website design",
-        "Mobile optimization",
-        "Content management system",
-        "Basic SEO setup",
-        "Monthly maintenance & updates",
-      ],
-    },
-    {
-      title: "6-Month Prepay",
-      setupFee: "$375",
-      setupDiscountText: "(25% off setup)",
-      monthlyCost: "$100",
-      upfrontPayment: "$600",
-      upfrontText: "(6 months)",
-      totalDue: "$975",
-      savings: "Save $125",
-      popular: false,
-      features: [
-        "All Monthly plan features",
-        "Discounted setup fee",
-        "Priority support",
-        "Monthly performance reports",
-        "Google Analytics integration",
-      ],
-    },
-    {
-      title: "12-Month Prepay",
-      setupFee: "$250",
-      setupDiscountText: "(50% off setup)",
-      monthlyCost: "$100",
-      upfrontPayment: "$1,200",
-      upfrontText: "(12 months)",
-      totalDue: "$1,450",
-      savings: "Save $250",
-      popular: true,
-      features: [
-        "All 6-Month plan features",
-        "Free logo refresh",
-        "Quarterly strategy sessions",
-        "Social media integration",
-        "Enhanced SEO package",
-      ],
-    },
-    {
-      title: "18-Month Prepay",
-      setupFee: "$0",
-      setupDiscountText: "(No setup fee)",
-      monthlyCost: "$100",
-      upfrontPayment: "$1,800",
-      upfrontText: "(18 months)",
-      totalDue: "$1,800",
-      savings: "Save $500",
-      popular: false,
-      features: [
-        "All 12-Month plan features",
-        "Free domain name for 2 years",
-        "Premium hosting included",
-        "Custom email addresses",
-        "Monthly content updates",
-      ],
-    },
-  ];
-
   const pricingPlans = [
     {
-      title: "Monthly",
-      setupFee: "$1,000",
-      monthlyCost: "$200",
-      upfrontPayment: "None",
-      totalDue: "$1,200",
-      savings: "—",
-      totalText: "(first month)",
+      title: "Starter Site",
+      tagline: "Simple & Effective",
+      audience:
+        "Perfect for new businesses or those just establishing an online presence",
       popular: false,
       features: [
-        "Custom responsive website design",
+        "Custom responsive single-page design",
         "Mobile optimization",
-        "Content management system",
+        "Contact form integration",
         "Basic SEO setup",
-        "Monthly maintenance & updates",
+        "Hosting & domain assistance",
       ],
+      ctaText: "Get Started",
     },
     {
-      title: "6-Month Prepay",
-      setupFee: "$750",
-      setupDiscountText: "(25% off setup)",
-      monthlyCost: "$200",
-      upfrontPayment: "$1,200",
-      upfrontText: "(6 months)",
-      totalDue: "$1,950",
-      savings: "Save $250",
-      popular: false,
-      features: [
-        "All Monthly plan features",
-        "Discounted setup fee",
-        "Priority support",
-        "Monthly performance reports",
-        "Google Analytics integration",
-      ],
-    },
-    {
-      title: "12-Month Prepay",
-      setupFee: "$500",
-      setupDiscountText: "(50% off setup)",
-      monthlyCost: "$200",
-      upfrontPayment: "$2,400",
-      upfrontText: "(12 months)",
-      totalDue: "$2,900",
-      savings: "Save $500",
+      title: "Business Builder",
+      tagline: "Growth & Engagement",
+      audience:
+        "Ideal for established businesses looking to expand their online reach",
       popular: true,
       features: [
-        "All 6-Month plan features",
-        "Free logo refresh",
-        "Quarterly strategy sessions",
-        "Social media integration",
-        "Enhanced SEO package",
+        "Multi-page professional website",
+        "Content management system",
+        "Search engine optimization",
+        "Google Analytics integration",
+        "Regular maintenance & updates",
       ],
+      ctaText: "Most Popular Choice",
     },
     {
-      title: "18-Month Prepay",
-      setupFee: "$0",
-      setupDiscountText: "(No setup fee)",
-      monthlyCost: "$200",
-      upfrontPayment: "$3,600",
-      upfrontText: "(18 months)",
-      totalDue: "$3,600",
-      savings: "Save $1,000",
+      title: "Tailored Solution",
+      tagline: "Custom & Comprehensive",
+      audience:
+        "For businesses with specific needs and advanced functionality requirements",
       popular: false,
       features: [
-        "All 12-Month plan features",
-        "Free domain name for 2 years",
-        "Premium hosting included",
-        "Custom email addresses",
-        "Monthly content updates",
+        "Fully customized design & functionality",
+        "E-commerce or membership capabilities",
+        "Advanced integrations",
+        "Content strategy & creation",
+        "Priority support & quarterly reviews",
       ],
+      ctaText: "Request Custom Quote",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative px-6 lg:px-8 py-24">
-          <div className="mx-auto max-w-7xl text-center">
+          <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-primary mb-6">
-              Simple, Transparent{" "}
+              Website Packages for{" "}
               <span className="bg-gradient-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
-                Pricing
+                Small Businesses
               </span>
             </h1>
-            <p className="max-w-2xl mx-auto text-lg text-secondary mb-12">
-              Choose the plan that works best for your business. All plans
-              include custom design, development, and ongoing support.
+            <p className="max-w-2xl mx-auto text-lg text-secondary mb-8">
+              Clear, transparent packages designed to get your business online
+              quickly with all the features you need to succeed.
+            </p>
+            <p className="text-sm text-secondary">
+              Packages starting at $500/year
+              <br />
+              (plus one-time setup fee)
             </p>
           </div>
         </section>
 
-        {/* Pricing Table single Page */}
+        {/* Pricing Cards */}
         <section className="px-6 lg:px-8 pb-24">
           <div className="mx-auto max-w-7xl">
-            <h2 className="text-3xl font-bold text-center text-primary mb-12">
-              One Page, All-Inclusive Design
-            </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {pricingPlanSinglePage.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`rounded-xl overflow-hidden border ${plan.popular ? "border-accent shadow-lg scale-105" : "border-border"} transition-all flex flex-col h-full relative`}
-                >
-                  {plan.popular && (
-                    <div className="absolute top-0 inset-x-0 bg-accent text-primary text-center py-2 font-medium">
-                      Most Popular
-                    </div>
-                  )}
-
-                  <div
-                    className={`p-6 text-center ${plan.popular ? "pt-12" : ""}`}
-                  >
-                    <h3 className="font-bold text-xl mb-6">{plan.title}</h3>
-
-                    <div className="space-y-4 mb-8">
-                      <div>
-                        <p className="text-sm text-secondary">Setup Fee</p>
-                        <p className="font-semibold text-primary">
-                          {plan.setupFee}{" "}
-                          {plan.setupDiscountText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.setupDiscountText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p className="text-sm text-secondary">Monthly Cost</p>
-                        <p className="font-semibold text-primary">
-                          {plan.monthlyCost}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p className="text-sm text-secondary">
-                          Upfront Payment
-                        </p>
-                        <p className="font-semibold text-primary">
-                          {plan.upfrontPayment}{" "}
-                          {plan.upfrontText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.upfrontText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-
-                      <div
-                        className={`${plan.popular ? "bg-accent/10 py-3 rounded-lg" : ""}`}
-                      >
-                        <p className="text-sm text-secondary">Total Due</p>
-                        <p className="font-bold text-xl text-primary">
-                          {plan.totalDue}{" "}
-                          {plan.totalText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.totalText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p
-                          className={`font-semibold ${plan.savings === "—" ? "text-secondary" : "text-[#22C55E]"}`}
-                        >
-                          {plan.savings}
-                        </p>
-                      </div>
-                    </div>
-
-                    <button
-                      className={`w-full py-3 rounded-lg font-medium ${plan.popular ? "bg-accent text-primary" : "bg-primary text-white"} hover:opacity-90 transition-opacity`}
-                    >
-                      Choose Plan
-                    </button>
-                  </div>
-
-                  <div className="p-6 bg-background/50 border-t border-border mt-auto">
-                    <h4 className="font-medium mb-4">What&apos;s included:</h4>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <Check className="w-5 h-5 text-[#22C55E] flex-shrink-0 mr-2" />
-                          <span className="text-secondary text-sm">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Table 5 Page */}
-        <section className="px-6 lg:px-8 pb-24">
-          <div className="mx-auto max-w-7xl">
-            <h2 className="text-3xl font-bold text-center text-primary mb-12">
-              Full Website Plans (Up to 5 Pages)
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div
+                <Card
                   key={index}
-                  className={`rounded-xl overflow-hidden border ${plan.popular ? "border-accent shadow-lg scale-105" : "border-border"} transition-all flex flex-col h-full relative`}
+                  className={`h-full ${
+                    plan.popular
+                      ? "border-accent shadow-lg relative"
+                      : "border-border"
+                  }`}
                 >
                   {plan.popular && (
-                    <div className="absolute top-0 inset-x-0 bg-accent text-primary text-center py-2 font-medium">
-                      Most Popular
+                    <div className="absolute -top-4 inset-x-0 flex justify-center">
+                      <Badge className="bg-accent text-primary px-4 py-1">
+                        Most Popular
+                      </Badge>
                     </div>
                   )}
 
-                  <div
-                    className={`p-6 text-center ${plan.popular ? "pt-12" : ""}`}
+                  <CardHeader
+                    className={`text-center ${plan.popular ? "pt-8" : "pt-6"}`}
                   >
-                    <h3 className="font-bold text-xl mb-6">{plan.title}</h3>
+                    <CardTitle className="text-xl font-bold">
+                      {plan.title}
+                    </CardTitle>
+                    <CardDescription className="text-secondary font-medium">
+                      {plan.tagline}
+                    </CardDescription>
+                  </CardHeader>
 
-                    <div className="space-y-4 mb-8">
-                      <div>
-                        <p className="text-sm text-secondary">Setup Fee</p>
-                        <p className="font-semibold text-primary">
-                          {plan.setupFee}{" "}
-                          {plan.setupDiscountText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.setupDiscountText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
+                  <CardContent className="space-y-6">
+                    <p className="text-sm text-center text-secondary">
+                      {plan.audience}
+                    </p>
 
-                      <div>
-                        <p className="text-sm text-secondary">Monthly Cost</p>
-                        <p className="font-semibold text-primary">
-                          {plan.monthlyCost}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p className="text-sm text-secondary">
-                          Upfront Payment
-                        </p>
-                        <p className="font-semibold text-primary">
-                          {plan.upfrontPayment}{" "}
-                          {plan.upfrontText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.upfrontText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-
-                      <div
-                        className={`${plan.popular ? "bg-accent/10 py-3 rounded-lg" : ""}`}
-                      >
-                        <p className="text-sm text-secondary">Total Due</p>
-                        <p className="font-bold text-xl text-primary">
-                          {plan.totalDue}{" "}
-                          {plan.totalText && (
-                            <span className="text-sm font-normal text-secondary">
-                              {plan.totalText}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p
-                          className={`font-semibold ${plan.savings === "—" ? "text-secondary" : "text-[#22C55E]"}`}
-                        >
-                          {plan.savings}
-                        </p>
-                      </div>
-                    </div>
-
-                    <button
-                      className={`w-full py-3 rounded-lg font-medium ${plan.popular ? "bg-accent text-primary" : "bg-primary text-white"} hover:opacity-90 transition-opacity`}
-                    >
-                      Choose Plan
-                    </button>
-                  </div>
-
-                  <div className="p-6 bg-background/50 border-t border-border mt-auto">
-                    <h4 className="font-medium mb-4">What&apos;s included:</h4>
-                    <ul className="space-y-3">
+                    <div className="space-y-3">
                       {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <Check className="w-5 h-5 text-[#22C55E] flex-shrink-0 mr-2" />
+                        <div key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-[#22C55E] flex-shrink-0 mr-3" />
                           <span className="text-secondary text-sm">
                             {feature}
                           </span>
-                        </li>
+                        </div>
                       ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
+                    </div>
+                  </CardContent>
 
-            <div className="mt-12 text-center">
-              <p className="text-secondary mb-8">
-                All plans include 24/7 support, free SSL certificate, and
-                regular backups.
-                <br />
-                Need something custom? Contact us for a tailored solution.
-              </p>
-              <button className="px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors">
-                Contact for Custom Quote
-              </button>
+                  <CardFooter className="pt-4">
+                    <Button
+                      className={`w-full ${
+                        plan.popular
+                          ? "bg-accent text-primary hover:bg-accent/90"
+                          : "bg-primary text-white hover:bg-primary/90"
+                      }`}
+                    >
+                      {plan.ctaText}
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -407,25 +167,25 @@ const Pricing = () => {
                     "The setup fee covers initial design, development, content migration, domain and hosting setup, and the launch of your new website. It's a one-time cost to get your site up and running.",
                 },
                 {
-                  question: "What does the monthly fee cover?",
+                  question: "What does the annual fee cover?",
                   answer:
-                    "The monthly fee includes website hosting, security updates, regular backups, basic SEO monitoring, technical support, and minor content updates as needed.",
+                    "The annual fee includes website hosting, security updates, regular backups, basic SEO monitoring, technical support, and minor content updates as needed.",
                 },
                 {
-                  question: "Can I upgrade or downgrade my plan later?",
+                  question: "Can I upgrade my plan later?",
                   answer:
-                    "Yes, you can upgrade your plan at any time. If you need to downgrade, you can do so at the end of your current billing cycle.",
+                    "Yes, you can upgrade your plan at any time as your business grows. We'll work with you to ensure a smooth transition with minimal disruption to your site.",
                 },
                 {
                   question: "Is there a refund policy?",
                   answer:
-                    "We offer a 14-day money-back guarantee on the setup fee. Monthly fees are non-refundable once the service period has begun.",
+                    "We offer a 14-day money-back guarantee on the setup fee. Annual fees are non-refundable once the service period has begun.",
                 },
                 {
                   question:
-                    "Are there any additional costs I should know about?",
+                    "Do I need technical knowledge to maintain my website?",
                   answer:
-                    "Our pricing is transparent with no hidden fees. The only potential additional costs would be for optional add-ons like premium stock photos, custom functionality, or extensive content creation services.",
+                    "Not at all. We handle all the technical aspects of your website. For content updates, we provide simple tools and guidance, or you can contact us directly for assistance.",
                 },
               ].map((faq, index) => (
                 <div
@@ -454,12 +214,14 @@ const Pricing = () => {
               Choose a plan that fits your needs and let&apos;s build a website
               that grows your business.
             </p>
-            <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
+            <Button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 text-lg h-auto">
               Schedule a Consultation
-            </button>
+            </Button>
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 };
