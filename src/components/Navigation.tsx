@@ -6,9 +6,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { ChevronDown, Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import MobileNav from "./MobileNav";
 
 const Navigation = () => {
   const locations = [
@@ -97,64 +97,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="flex flex-col h-full py-6">
-              <div className="flex flex-col space-y-4">
-                <Link
-                  href="/services"
-                  className="text-lg font-medium py-2 border-b border-border"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="text-lg font-medium py-2 border-b border-border"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  href="/about"
-                  className="text-lg font-medium py-2 border-b border-border"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="text-lg font-medium py-2 border-b border-border"
-                >
-                  Pricing
-                </Link>
-
-                <div className="py-2 border-b border-border">
-                  <p className="text-lg font-medium mb-2">Locations</p>
-                  <div className="pl-4 flex flex-col space-y-2">
-                    {locations.map((location) => (
-                      <Link
-                        key={location}
-                        href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="text-secondary hover:text-primary"
-                      >
-                        {location}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-auto">
-                <Button className="w-full text-white bg-accent hover:bg-accent/90">
-                  Get a Free Quote
-                </Button>
-              </div>
-            </div>
-          </SheetContent>
-        </Sheet>
+        <MobileNav locations={locations} />
       </div>
     </nav>
   );
