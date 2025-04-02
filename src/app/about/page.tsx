@@ -1,6 +1,7 @@
 import { Award, Clock, Users } from "lucide-react";
 
 const About = () => {
+  const IMAGE_BASE_PATH = "/assets/about";
   return (
     <div className="min-h-screen bg-background">
       <main className="pt-16">
@@ -14,9 +15,9 @@ const About = () => {
               </span>
             </h1>
             <p className="max-w-2xl text-lg text-secondary mb-12">
-              A modern web design agency focused on helping small businesses
-              establish a powerful online presence that drives growth and
-              success.
+              EDC Web Design helps small businesses in El Dorado County and
+              beyond grow their online presence with beautiful, strategic
+              websites that attract, convert, and retain customers.
             </p>
           </div>
         </section>
@@ -28,30 +29,31 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <p className="text-secondary mb-4">
-                  EDC Web Design was founded in 2018 by Emma Davis Cooper, a web
-                  developer with a passion for helping small businesses thrive
-                  in the digital landscape. After spending years working with
-                  large agencies, Emma noticed that small businesses often
-                  received cookie-cutter solutions that didn&apos;t address
-                  their unique needs.
+                  EDC Web Design was founded by Garret Grant, a full-stack
+                  software engineer and entrepreneur with a passion for helping
+                  small business owners succeed online. Inspired by his mom, who
+                  worked as a cleaning lady and built her own business from the
+                  ground up, Garret started EDC with one goal in mind: to make
+                  powerful, high-quality websites accessible to everyday
+                  business owners.
                 </p>
                 <p className="text-secondary mb-4">
-                  What started as a one-person operation has grown into a
-                  dedicated team of designers, developers, and digital
-                  strategists who share a common goal: delivering exceptional
-                  web experiences that drive real business results for our
-                  clients.
+                  What started as a solo venture has grown into a client-first
+                  agency that partners with small businesses to design fast,
+                  SEO-optimized websites that actually get results. Whether
+                  you&apos;re just starting out or ready to scale, we&apos;re
+                  here to make your digital presence work harder for you.
                 </p>
                 <p className="text-secondary">
-                  Today, EDC Web Design works exclusively with small business
-                  owners who need more than just a website—they need a growth
-                  partner who understands their challenges and aspirations.
+                  We specialize in understanding your local market, building
+                  trust with your customers, and turning your website into a
+                  tool that drives leads, sales, and credibility.
                 </p>
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
-                  alt="Team working together"
+                  src={`${IMAGE_BASE_PATH}/belltower.webp`}
+                  alt="Garret working on a website project"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -64,9 +66,9 @@ const About = () => {
           <div className="mx-auto max-w-7xl text-center">
             <h2 className="text-3xl font-bold mb-8">Our Mission</h2>
             <p className="text-secondary max-w-3xl mx-auto text-lg mb-16">
-              To empower small businesses with beautiful, functional websites
-              that work as hard as they do, enabling them to compete effectively
-              in today&apos;s digital marketplace.
+              To support small business owners with handcrafted websites that
+              are fast, functional, and designed to grow your business—without
+              the hassle or the fluff.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -114,40 +116,39 @@ const About = () => {
               <div className="md:col-span-2">
                 <div className="rounded-xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
-                    alt="Emma Davis Cooper"
+                    src={`${IMAGE_BASE_PATH}/founder.webp`}
+                    alt="Garret Grant"
                     className="w-full object-cover"
                   />
                 </div>
               </div>
               <div className="md:col-span-3">
-                <h3 className="text-2xl font-semibold mb-4">
-                  Emma Davis Cooper
-                </h3>
+                <h3 className="text-2xl font-semibold mb-4">Garret Grant</h3>
                 <p className="text-secondary mb-4">
-                  With over 12 years of experience in web development and
-                  design, Emma combines technical expertise with a keen eye for
-                  aesthetics. She holds a degree in Computer Science and has
-                  worked with businesses ranging from local startups to national
-                  brands.
+                  Garret is a professional software engineer and founder of EDC
+                  Web Design. With a strong background in both frontend and
+                  backend development, he brings a practical, no-nonsense
+                  approach to building websites that are fast, SEO-ready, and
+                  tailored for real-world business results.
                 </p>
                 <p className="text-secondary mb-4">
-                  &quot;I believe that every small business deserves a website
-                  that not only looks professional but also serves as a powerful
-                  tool for growth. My goal is to bridge the gap between complex
-                  technology and real business needs, making the web work for
-                  you rather than the other way around.&quot;
+                  &quot;I started EDC to help small business owners like my
+                  mom—hardworking, passionate people who deserve more than a
+                  cookie-cutter site. Your website should do more than just look
+                  good—it should grow your business, establish trust, and save
+                  you time.&quot;
                 </p>
                 <p className="text-secondary">
-                  When not designing websites, Emma enjoys hiking, photography,
-                  and volunteering with local business mentorship programs.
+                  Outside of building websites, Garret enjoys staying active,
+                  learning new tech, and exploring ways to help fellow
+                  entrepreneurs succeed.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us */}
+        {/* Why Clients Choose Us */}
         <section className="py-24 bg-primary text-white px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="text-3xl font-bold mb-16 text-center">
@@ -155,12 +156,12 @@ const About = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                "We exclusively focus on small businesses, so we understand your unique challenges and constraints.",
-                "Our websites aren't just beautiful—they're strategically designed to convert visitors into customers.",
-                "We provide clear, jargon-free communication throughout the entire process.",
-                "Every website we build is optimized for speed, security, and search engines from day one.",
-                "We believe in transparent pricing with no hidden fees or surprise costs.",
-                "Our ongoing support ensures your website continues to perform and evolve with your business.",
+                "We specialize in serving small businesses—so we understand your budget, your time constraints, and your need to stand out.",
+                "Our websites are designed with intention: built to convert visitors into loyal customers.",
+                "Clear communication, honest timelines, and zero tech jargon—we speak your language.",
+                "From launch to long-term support, every site is optimized for speed, security, and search engines.",
+                "Upfront pricing with no hidden fees or surprise invoices—just real value.",
+                "We treat every website as if it were our own, with a focus on ROI and growth.",
               ].map((reason, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="mt-1 flex-shrink-0">
