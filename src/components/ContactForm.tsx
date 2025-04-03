@@ -126,9 +126,9 @@ const ContactForm = () => {
 
         <div className="space-y-2 pt-2">
           <p className="text-sm text-center text-muted-foreground">
-            You&apos;re not submitting into a void — I personally read every message
-            and respond quickly. Your information stays private, and I never
-            spam.
+            You&apos;re not submitting into a void — I personally read every
+            message and respond quickly. Your information stays private, and I
+            never spam.
           </p>
           <p className="text-sm text-center text-muted-foreground">
             I&apos;ll get back to you within 24 hours.

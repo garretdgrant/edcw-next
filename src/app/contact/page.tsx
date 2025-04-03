@@ -63,9 +63,9 @@ const ContactPage = () => {
               Contact a Local Web Designer You Can Trust
             </h1>
             <p className="text-secondary text-center mb-12 text-lg max-w-2xl mx-auto">
-              Let&apos;s talk about your website goals. Whether you&apos;re starting from
-              scratch or need a redesign, I help small businesses in El Dorado
-              County build fast, modern websites that work.
+              Let&apos;s talk about your website goals. Whether you&apos;re
+              starting from scratch or need a redesign, I help small businesses
+              in El Dorado County build fast, modern websites that work.
             </p>
 
             <div className="grid md:grid-cols-2 gap-12">
