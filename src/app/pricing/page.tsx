@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -213,9 +214,12 @@ const Pricing = () => {
               Choose a plan that fits your needs and let&apos;s build a website
               that grows your business.
             </p>
-            <Button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 text-lg h-auto">
-              Schedule a Consultation
-            </Button>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 text-lg h-auto"
+            >
+              Book a Website Strategy Call
+            </Link>
           </div>
         </section>
       </main>

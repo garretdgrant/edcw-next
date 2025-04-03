@@ -10,6 +10,7 @@ import {
   Smartphone,
   Check,
 } from "lucide-react";
+import Link from "next/link";
 
 const ServicePage = () => {
   const services = [
@@ -307,9 +308,12 @@ const ServicePage = () => {
               Let&apos;s talk about how our services can help your business grow
               online.
             </p>
-            <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
-              Get in Touch
-            </button>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
+            >
+              Let&apos;s Talk About Your Website
+            </Link>
           </div>
         </section>
       </main>

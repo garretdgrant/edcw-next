@@ -1,4 +1,5 @@
 import { Award, Clock, Users } from "lucide-react";
+import Link from "next/link";
 
 const About = () => {
   const IMAGE_BASE_PATH = "/assets/about";
@@ -186,9 +187,12 @@ const About = () => {
               Let&apos;s discuss how we can help your business stand out online
               with a website that truly works for you.
             </p>
-            <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
-              Schedule a Free Consultation
-            </button>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
+            >
+              Schedule Your Free Website Consultation
+            </Link>
           </div>
         </section>
       </main>

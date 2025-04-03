@@ -153,9 +153,12 @@ const Portfolio = () => {
               Let&apos;s collaborate to build a custom website that works hard
               for your business—just like these success stories.
             </p>
-            <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
-              Start Your Project
-            </button>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
+            >
+              Start Your Website Project Today
+            </Link>
           </div>
         </section>
       </main>

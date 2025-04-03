@@ -1,5 +1,5 @@
 // src/components/Layout.tsx
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Navigation from "./Navigation";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +7,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       <main className="grow">{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
