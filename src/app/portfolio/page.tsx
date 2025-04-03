@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -127,9 +128,13 @@ const Portfolio = () => {
                         <p className="text-secondary text-sm">{item.outcome}</p>
                       </div>
 
-                      <button className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                        View Case Study <ArrowRight className="w-4 h-4" />
-                      </button>
+                      <Link
+                        href={item.companyLink}
+                        className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                        target="_blank"
+                      >
+                        View Website <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
                 </div>
