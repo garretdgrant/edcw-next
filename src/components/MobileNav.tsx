@@ -7,10 +7,10 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
 
 interface MobileNavProps {
-  locations: string[];
+  _locations: string[];
 }
 
-const MobileNav = ({ locations }: MobileNavProps) => {
+const MobileNav = ({ _locations }: MobileNavProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ const MobileNav = ({ locations }: MobileNavProps) => {
               </Link>
             ))}
 
-            <div className="py-2 border-b border-border">
+            {/* <div className="py-2 border-b border-border">
               <p className="text-lg font-medium mb-2">Locations</p>
               <div className="pl-4 flex flex-col space-y-2">
                 {locations.map((location) => (
@@ -53,7 +53,7 @@ const MobileNav = ({ locations }: MobileNavProps) => {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-auto">

@@ -1,12 +1,12 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "./ui/dropdown-menu";
+// import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
 
@@ -62,7 +62,7 @@ const Navigation = () => {
           >
             Pricing
           </Link>
-          <div className="relative">
+          {/* <div className="relative">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-secondary hover:text-primary transition-colors">
                 Locations <ChevronDown className="ml-1 h-4 w-4" />
@@ -84,7 +84,7 @@ const Navigation = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-          </div>
+          </div> */}
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
@@ -97,7 +97,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <MobileNav locations={locations} />
+        <MobileNav _locations={locations} />
       </div>
     </nav>
   );
