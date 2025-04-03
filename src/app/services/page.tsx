@@ -4,7 +4,7 @@ import {
   Layout,
   PenTool,
   BarChart,
-  Globe,
+  Rocket,
   Search,
   Shield,
   Smartphone,
@@ -16,112 +16,113 @@ const ServicePage = () => {
     {
       title: "Website Design & Development",
       description:
-        "Beautiful, responsive websites built to convert visitors into customers.",
+        "Modern websites tailored to your brand — from high-performing single-page sites to full five-page builds.",
       icon: <Layout className="w-12 h-12" />,
       features: [
         "Custom responsive design",
         "Mobile optimization",
-        "User experience focused",
-        "Fast-loading pages",
-        "Content management system",
-        "Contact forms and lead capture",
+        "Single-page or multi-page builds",
+        "Fast-loading performance",
+        "Easy-to-manage content",
+        "Lead capture & contact forms",
       ],
     },
     {
       title: "Search Engine Optimization",
       description:
-        "Get found online with our proven SEO strategies tailored for local businesses.",
+        "Get found on Google with practical, local SEO strategies that help real customers discover your business.",
       icon: <Search className="w-12 h-12" />,
       features: [
-        "Keyword research",
-        "On-page optimization",
-        "Local SEO setup",
-        "Google Business profile optimization",
-        "SEO audit and reporting",
-        "Content strategy",
+        "Local keyword research",
+        "On-page SEO best practices",
+        "Google Business Profile setup",
+        "Structured data & metadata",
+        "Site speed optimization",
+        "Content improvement suggestions",
       ],
     },
     {
-      title: "E-commerce Solutions",
+      title: "Website Setup & Launch Support",
       description:
-        "Turn your website into a 24/7 sales machine with our e-commerce expertise.",
-      icon: <Globe className="w-12 h-12" />,
+        "I’ll help you connect all the technical dots — from domains to email to hosting — so your site is ready to go live smoothly and professionally.",
+      icon: <Rocket className="w-12 h-12" />,
       features: [
-        "Product catalog setup",
-        "Payment gateway integration",
-        "Inventory management",
-        "Shipping options configuration",
-        "Order notification system",
-        "Customer account management",
+        "Domain name registration guidance",
+        "Hosting and DNS setup",
+        "SSL certificate installation",
+        "Professional business email setup",
+        "Platform walkthrough or video tutorial",
+        "Launch checklist to ensure nothing gets missed",
       ],
     },
     {
       title: "Custom Development",
       description:
-        "Tailored solutions with clean code for your specific business needs.",
+        "Need something more technical? I build clean, scalable solutions tailored to your business needs.",
       icon: <Code className="w-12 h-12" />,
       features: [
-        "Custom web applications",
+        "Custom web apps",
         "API integrations",
-        "Automation tools",
+        "Automation workflows",
         "Database design",
-        "Third-party service connections",
-        "Performance optimization",
-      ],
-    },
-    {
-      title: "Branding & Identity",
-      description:
-        "Establish a cohesive visual identity that resonates with your target audience.",
-      icon: <PenTool className="w-12 h-12" />,
-      features: [
-        "Logo design",
-        "Brand style guide",
-        "Color palette selection",
-        "Typography system",
-        "Business card design",
-        "Social media templates",
+        "Third-party tool connections",
+        "Speed & code optimization",
       ],
     },
     {
       title: "Analytics & Reporting",
       description:
-        "Gain insights into your website's performance to make data-driven decisions.",
+        "Understand how your website performs with clear, easy-to-read data and ongoing recommendations.",
       icon: <BarChart className="w-12 h-12" />,
       features: [
-        "Google Analytics setup",
-        "Conversion tracking",
-        "User behavior analysis",
-        "Monthly performance reports",
-        "Competitor analysis",
-        "Improvement recommendations",
+        "Google Analytics integration",
+        "Conversion & traffic tracking",
+        "User journey analysis",
+        "Monthly site reports",
+        "Competitor insights",
+        "Actionable growth tips",
       ],
     },
     {
       title: "Website Maintenance",
       description:
-        "Keep your website secure, updated, and performing at its best.",
+        "Don’t let your site fall behind — keep it secure, updated, and running smoothly with expert care.",
       icon: <Shield className="w-12 h-12" />,
       features: [
-        "Security monitoring",
-        "Regular backups",
-        "Software updates",
-        "Bug fixes",
-        "Performance optimization",
-        "Content updates",
+        "Ongoing software updates",
+        "Real-time security monitoring",
+        "Daily or weekly backups",
+        "Quick bug fixes",
+        "Speed and image optimization",
+        "Content swaps and edits",
       ],
     },
     {
       title: "Mobile App Design",
-      description: "Extend your web presence with a custom mobile application.",
+      description:
+        "Looking to go mobile? Get a clean, user-friendly app design that matches your brand and goals.",
       icon: <Smartphone className="w-12 h-12" />,
       features: [
-        "UI/UX design",
-        "Prototype development",
-        "Cross-platform solutions",
-        "App store submission",
+        "Custom app interface design",
+        "Interactive prototypes",
+        "iOS + Android-ready layouts",
+        "App Store graphics",
         "Push notification setup",
-        "Ongoing maintenance",
+        "Design for growth & scalability",
+      ],
+    },
+    {
+      title: "Branding & Identity",
+      description:
+        "Set yourself apart with a cohesive visual identity that reflects your brand’s personality and values.",
+      icon: <PenTool className="w-12 h-12" />,
+      features: [
+        "Professional logo design",
+        "Brand style guidelines",
+        "Color palette selection",
+        "Font and typography system",
+        "Print-ready business cards",
+        "Social media visuals",
       ],
     },
   ];
@@ -139,8 +140,8 @@ const ServicePage = () => {
               </span>
             </h1>
             <p className="max-w-2xl text-lg text-secondary mb-12">
-              Comprehensive web design and digital solutions to help your small
-              business establish a powerful online presence.
+              Custom-built websites and growth-driven digital solutions for
+              small business owners ready to level up online.
             </p>
           </div>
         </section>

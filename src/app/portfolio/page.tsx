@@ -3,59 +3,65 @@ import { ArrowRight } from "lucide-react";
 const Portfolio = () => {
   const portfolioItems = [
     {
-      title: "Mountain Café",
+      title: "Ogden Construction",
       description:
-        "A responsive website for a local coffee shop with online ordering capabilities and a loyalty program.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
+        "High-performance website for a Placerville-based contractor. Designed to showcase services, boost SEO, and convert visitors into local leads.",
+      image: "/assets/homepage/construction.webp",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       outcome:
-        "50% increase in online orders within the first month of launch.",
+        "Increased qualified lead inquiries and boosted visibility in local search results.",
+      companyLink: "https://www.ogden-construction.com",
     },
     {
-      title: "Harbor Real Estate",
+      title: "Snow White Cleaning",
       description:
-        "Property listing site with advanced search features, virtual tours, and agent profiles.",
-      image: "https://images.unsplash.com/photo-1551038247-3d9af20df552",
-      technologies: ["React", "Firebase", "Google Maps API"],
+        "Elegant marketing site for a Cameron Park cleaning company. Built to build trust, display pricing, and drive bookings from local homeowners.",
+      image: "/assets/homepage/cleaning.webp",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       outcome:
-        "Reduced property listing time by 35% and increased lead generation by 65%.",
+        "Helped a solo business owner look more established and attract ideal clients.",
+      companyLink: "https://www.snow-white-cleaning.com",
     },
     {
-      title: "Bloom Florists",
+      title: "My Favorite Petsitter",
       description:
-        "E-commerce platform with delivery scheduling, occasion reminders, and custom arrangement builder.",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
-      technologies: ["React", "Stripe", "Express.js"],
+        "Wholesome, pet-friendly design for a trusted Folsom-based sitter. Built to highlight services, build trust with testimonials, and simplify booking for busy pet parents.",
+      image: "/assets/homepage/petsitter.webp",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       outcome:
-        "Revenue increased by 40% year-over-year after website redesign.",
+        "Enabled smooth online scheduling and helped the brand rank locally in Folsom.",
+      companyLink: "https://www.myfavpetsitter.org",
     },
-    {
-      title: "Wellness Yoga Studio",
-      description:
-        "Membership site with class scheduling, online payments, and instructor profiles.",
-      image: "https://images.unsplash.com/photo-1545389336-cf090694435e",
-      technologies: ["React", "Tailwind CSS", "WordPress API"],
-      outcome:
-        "Class bookings increased by 75% and new member sign-ups doubled.",
-    },
-    {
-      title: "Artisan Bakery",
-      description:
-        "Website featuring product catalog, catering services, and custom order forms.",
-      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff",
-      technologies: ["React", "MongoDB", "Express.js"],
-      outcome:
-        "Catering orders increased by 60% within three months of launch.",
-    },
-    {
-      title: "Urban Fitness Club",
-      description:
-        "Membership portal with class registration, progress tracking, and nutrition planning.",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
-      technologies: ["React", "Node.js", "Chart.js"],
-      outcome:
-        "Member retention improved by 25% due to enhanced digital experience.",
-    },
+    // {
+    //   title: "Wellness Yoga Studio",
+    //   description:
+    //     "Modern membership website for a community yoga studio in Grass Valley. Includes class scheduling, instructor bios, and integrated online payments for ease of booking.",
+    //   image: "https://images.unsplash.com/photo-1545389336-cf090694435e",
+    //   technologies: ["React", "Tailwind CSS", "WordPress API"],
+    //   outcome:
+    //     "Increased class bookings by 75% and doubled new student sign-ups in the first 60 days.",
+    //   companyLink: "https://www.wellnessyogagv.com",
+    // },
+    // {
+    //   title: "Artisan Bakery",
+    //   description:
+    //     "Charming online storefront for a boutique bakery in Auburn, CA. Built to showcase their menu, enable custom cake orders, and highlight catering services.",
+    //   image: "https://images.unsplash.com/photo-1509440159596-0249088772ff",
+    //   technologies: ["React", "MongoDB", "Express.js"],
+    //   outcome:
+    //     "Catering inquiries grew by 60% within 3 months after launch, leading to recurring event partnerships.",
+    //   companyLink: "https://www.artisanbakeshopca.com",
+    // },
+    // {
+    //   title: "Urban Fitness Club",
+    //   description:
+    //     "Sleek membership portal for a downtown Sacramento gym. Includes class registration, progress tracking, and nutrition planning to engage members digitally.",
+    //   image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+    //   technologies: ["React", "Node.js", "Chart.js"],
+    //   outcome:
+    //     "Improved member retention by 25% and reduced admin time through self-serve tools.",
+    //   companyLink: "https://www.urbanfitclub.com",
+    // },
   ];
 
   return (
@@ -71,9 +77,8 @@ const Portfolio = () => {
               </span>
             </h1>
             <p className="max-w-2xl text-lg text-secondary mb-12">
-              Explore our recent web design and development projects for small
-              businesses. Each project is crafted with precision, focusing on
-              user experience, performance, and business goals.
+              Take a look at the websites we’ve built for real small businesses
+              — each project is designed for performance, trust, and growth.
             </p>
           </div>
         </section>
@@ -137,11 +142,11 @@ const Portfolio = () => {
         <section className="py-24 bg-primary text-white px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-8">
-              Ready to build your next digital project?
+              Ready to transform your online presence?
             </h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Let&apos;s create a website that truly represents your business
-              and drives real results, just like we did for these clients.
+              Let&apos;s collaborate to build a custom website that works hard
+              for your business—just like these success stories.
             </p>
             <button className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors">
               Start Your Project

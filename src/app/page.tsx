@@ -20,20 +20,23 @@ export default function HomePage() {
     {
       title: "Ogden Construction",
       description:
-        "High-performance website for a Placerville-based contractor. Designed to showcase services, boost SEO, and convert visitors into local leads.",
+        "High-performance website for a Placerville-based general contractor. Designed to showcase services, boost SEO, and convert visitors into local construction leads.",
       image: `${HOMEPAGE_IMAGE_BASE_PATH}/construction.webp`,
+      companyLink: "https://www.ogden-construction.com",
     },
     {
       title: "Snow White Cleaning",
       description:
-        "Elegant marketing site for a professional cleaning company. Highlights services, builds trust, and drives inquiries through a clean, mobile-friendly layout.",
+        "Elegant website for a residential and commercial cleaning company in Cameron Park. Built to build trust, highlight services, and drive new client inquiries through a clean, mobile-friendly layout.",
       image: `${HOMEPAGE_IMAGE_BASE_PATH}/cleaning.webp`,
+      companyLink: "https://www.snow-white-cleaning.com",
     },
     {
-      title: "Alpine Diesel",
+      title: "My Favorite Petsitter",
       description:
-        "Bold and rugged design for a mobile diesel mechanic. Built to capture leads from fleet owners and off-road enthusiasts in need of on-site repairs.",
-      image: `${HOMEPAGE_IMAGE_BASE_PATH}/mechanic.png`,
+        "Wholesome, pet-friendly design for a trusted Folsom-based pet sitter. Crafted to showcase services, build trust through testimonials, and simplify bookings for busy pet parents.",
+      image: `${HOMEPAGE_IMAGE_BASE_PATH}/petsitter.webp`,
+      companyLink: "https://www.myfavpetsitter.org",
     },
   ];
 
@@ -148,7 +151,7 @@ export default function HomePage() {
                   <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
                   <p className="text-secondary">{item.description}</p>
                   <Link
-                    href="https://www.ogden-construction.com"
+                    href={item.companyLink}
                     target="_blank"
                     className="mt-4 text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
                   >
