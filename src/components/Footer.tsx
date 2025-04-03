@@ -49,19 +49,19 @@ const Footer = () => {
           </p>
           <div className="flex items-center space-x-6">
             <Link
-              href="#"
+              href="https://www.facebook.com/garret.d.grant"
               className="text-white/70 hover:text-white transition-colors"
             >
               Facebook
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/garret.grant/"
               className="text-white/70 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/garret-d-grant/"
               className="text-white/70 hover:text-white transition-colors"
             >
               LinkedIn
