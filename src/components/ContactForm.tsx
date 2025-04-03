@@ -188,7 +188,7 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="w-full bg-accent text-black hover:bg-accent/90"
+          className="w-full bg-accent text-black hover:bg-accent/90 cursor-pointer"
         >
           Send Message
         </Button>
