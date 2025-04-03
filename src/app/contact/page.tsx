@@ -101,7 +101,7 @@ const ContactPage = () => {
                       <Phone className="h-5 w-5 text-accent mr-3" />
                       <div>
                         <p className="font-medium">Phone</p>
-                        <p className="text-secondary">(555) 123-4567</p>
+                        <p className="text-secondary">(530) 391-7473</p>
                       </div>
                     </div>
 
@@ -110,10 +110,10 @@ const ContactPage = () => {
                       <div>
                         <p className="font-medium">Instagram</p>
                         <a
-                          href="https://instagram.com/yourprofile"
+                          href="https://instagram.com/garret.grant"
                           className="text-secondary hover:text-primary transition-colors"
                         >
-                          @yourprofile
+                          @garret.grant
                         </a>
                       </div>
                     </div>
@@ -123,7 +123,7 @@ const ContactPage = () => {
                       <div>
                         <p className="font-medium">Facebook</p>
                         <a
-                          href="https://facebook.com/yourpage"
+                          href="https://facebook.com/garret.grant"
                           className="text-secondary hover:text-primary transition-colors"
                         >
                           EDC Web Design
