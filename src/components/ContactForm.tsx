@@ -54,17 +54,48 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: FormValues) {
-    if (values.company) {
-      return; // silently fail if honeypot filled (likely a bot)
+  async function onSubmit(values: FormValues) {
+    // Honeypot check
+    if (values.company) return;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          message: values.message,
+          company: values.company,
+        }),
+      });
+      console.log(res);
+      if (res.ok) {
+        toast({
+          title: "Message Sent!",
+          description:
+            "Thank you for reaching out. We&apos;ll get back to you within 24 hours.",
+        });
+        form.reset();
+      } else {
+        const data = await res.json();
+        toast({
+          title: "Oops!",
+          description:
+            data?.error || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Server Error",
+        description:
+          "There was a problem submitting your message. Please try again soon.",
+        variant: "destructive",
+      });
+      console.error("Form submission error:", error);
     }
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description:
-        "Thank you for reaching out. We'll get back to you within 24 hours.",
-    });
-    form.reset();
   }
 
   return (

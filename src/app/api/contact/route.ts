@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     if (!name || !email || !message || !phone) {
       return new Response(
         JSON.stringify({ success: false, error: "Missing required fields." }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -30,14 +30,14 @@ export async function POST(req: NextRequest) {
     if (!isValidEmail(email)) {
       return new Response(
         JSON.stringify({ success: false, error: "Invalid email address" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (!isValidPhone(phone)) {
       return new Response(
         JSON.stringify({ success: false, error: "Invalid phone number" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
