@@ -25,10 +25,18 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
+  phone: z
+    .string()
+    .min(10, { message: "Phone number is required." })
+    .refine((val) => val.replace(/\D/g, "").length === 10, {
+      message: "Phone number must be 10 digits.",
+    }),
+
   businessName: z.string().optional(),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
+  company: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -39,12 +47,17 @@ const ContactForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       businessName: "",
       message: "",
+      company: "",
     },
   });
 
   function onSubmit(values: FormValues) {
+    if (values.company) {
+      return; // silently fail if honeypot filled (likely a bot)
+    }
     console.log(values);
     toast({
       title: "Message Sent!",
@@ -66,11 +79,23 @@ const ContactForm = () => {
               <FormControl>
                 <Input placeholder="Your name" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
-
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone</FormLabel>
+              <FormControl>
+                <Input placeholder="(123) 456-7890" {...field} />
+              </FormControl>
+              <FormMessage className="text-red-500" />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="email"
@@ -80,7 +105,20 @@ const ContactForm = () => {
               <FormControl>
                 <Input placeholder="you@example.com" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="company"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormLabel className="sr-only">Leave this field blank</FormLabel>
+              <FormControl>
+                <Input tabIndex={-1} autoComplete="off" {...field} />
+              </FormControl>
             </FormItem>
           )}
         />
@@ -94,7 +132,7 @@ const ContactForm = () => {
               <FormControl>
                 <Input placeholder="Your business name" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />
@@ -107,12 +145,12 @@ const ContactForm = () => {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us some details about your small business and what you want out of a website..."
                   className="min-h-[120px]"
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-500" />
             </FormItem>
           )}
         />

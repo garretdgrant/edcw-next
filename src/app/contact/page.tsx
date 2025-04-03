@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
         name: "EDC Web Design",
         url: "https://www.edcwebdesign.com",
         email: "garret@edcwebdesign.com",
-        telephone: "+1-555-123-4567",
+        telephone: "+1-530-391-7473",
         address: {
           addressLocality: "El Dorado County",
           addressRegion: "CA",
@@ -44,8 +44,8 @@ export async function generateMetadata(): Promise<Metadata> {
         description:
           "EDC Web Design helps small businesses in El Dorado County build modern, SEO-friendly websites that generate leads and conversions.",
         sameAs: [
-          "https://instagram.com/yourprofile",
-          "https://facebook.com/yourpage",
+          "https://instagram.com/garret.grant",
+          "https://facebook.com/garret.d.grant",
         ],
         image: "https://www.edcwebdesign.com/assets/logo.webp",
       }),
