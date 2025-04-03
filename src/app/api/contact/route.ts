@@ -1,4 +1,3 @@
-// src/app/api/email/route.ts
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
 import { isSpamHoneypot } from "@/lib/spam";
@@ -8,7 +7,7 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await req.json();
-    const { name, email, phone, message, company } = body;
+    const { name, email, phone, message, businessName, company } = body;
     console.log("Received form submission:", body);
 
     // 🛡️ Honeypot spam check
@@ -19,13 +18,11 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // basic required field validation
+    // Basic required field validation
     if (!name || !email || !message || !phone) {
       return new Response(
         JSON.stringify({ success: false, error: "Missing required fields." }),
-        {
-          status: 400,
-        },
+        { status: 400 }
       );
     }
 
@@ -33,22 +30,21 @@ export async function POST(req: NextRequest) {
     if (!isValidEmail(email)) {
       return new Response(
         JSON.stringify({ success: false, error: "Invalid email address" }),
-        { status: 400 },
+        { status: 400 }
       );
     }
 
-    if (phone && !isValidPhone(phone)) {
+    if (!isValidPhone(phone)) {
       return new Response(
         JSON.stringify({ success: false, error: "Invalid phone number" }),
-        { status: 400 },
+        { status: 400 }
       );
     }
 
     const { data, error } = await resend.emails.send({
       from: "info@ogden-construction.com",
-      // to: "leviogden777@gmail.com",
       to: "garret.grant.swe@gmail.com",
-      subject: `New Message from ${name} via Website Contact Form`,
+      subject: `🚨 NEW WEBSITE LEAD: Message from ${name} via Website Contact Form`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; color: #333;">
           <h2 style="color: #2e7d32;">📬 New Contact Form Submission</h2>
@@ -63,7 +59,11 @@ export async function POST(req: NextRequest) {
             </tr>
             <tr>
               <td style="padding: 8px; font-weight: bold;">Phone:</td>
-              <td style="padding: 8px;">${phone || "Not provided"}</td>
+              <td style="padding: 8px;">${phone}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold;">Business Name:</td>
+              <td style="padding: 8px;">${businessName || "Not provided"}</td>
             </tr>
           </table>
           <div style="margin-top: 20px;">
