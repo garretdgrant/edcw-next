@@ -20,6 +20,7 @@ const Pricing = () => {
       audience:
         "Perfect for new businesses or those just establishing an online presence",
       popular: false,
+      priceText: "500",
       features: [
         "Custom responsive single-page design",
         "Mobile optimization",
@@ -35,6 +36,7 @@ const Pricing = () => {
       audience:
         "Ideal for established businesses looking to expand their online reach",
       popular: true,
+      priceText: "600",
       features: [
         "Multi-page professional website",
         "Content management system",
@@ -50,6 +52,7 @@ const Pricing = () => {
       audience:
         "For businesses with specific needs and advanced functionality requirements",
       popular: false,
+      priceText: "750",
       features: [
         "Fully customized design & functionality",
         "E-commerce or membership capabilities",
@@ -79,10 +82,11 @@ const Pricing = () => {
               Clear, transparent packages designed to get your business online
               quickly with all the features you need to succeed.
             </p>
-            <p className="text-sm text-secondary">
-              Packages starting at $500/year
+            <p className="text-base text-secondary">
+              Plans start at $500/year
               <br />
-              (plus one-time setup fee)
+              (One-time setup fee varies by project and will be discussed during
+              your consultation)
             </p>
           </div>
         </section>
@@ -117,6 +121,11 @@ const Pricing = () => {
                     <CardDescription className="text-secondary font-medium">
                       {plan.tagline}
                     </CardDescription>
+                    <p className={`mt-2 text-sm font-semibold`}>
+                      From{" "}
+                      <span className="text-[#22C55E]">${plan.priceText}</span>{" "}
+                      per year
+                    </p>
                   </CardHeader>
 
                   <CardContent className="space-y-6">

@@ -48,9 +48,7 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
             Custom websites designed to
             <br />
-            <span className="bg-linear-to-r from-[#D4AF37] to-[#F3C969] bg-clip-text text-transparent">
-              grow your small business
-            </span>
+            <span className="text-gold-gradient">grow your small business</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-secondary mb-8">
             We create fast, SEO-optimized websites tailored for small businesses

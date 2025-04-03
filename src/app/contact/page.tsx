@@ -60,7 +60,9 @@ const ContactPage = () => {
         <div className="flex-1">
           <div className="pt-28 pb-16 px-6 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              Contact a Local Web Designer You Can Trust
+              Contact a{" "}
+              <span className="text-gold-gradient">Local Web Designer</span> You
+              Can Trust
             </h1>
             <p className="text-secondary text-center mb-12 text-lg max-w-2xl mx-auto">
               Let&apos;s talk about your website goals. Whether you&apos;re

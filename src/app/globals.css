@@ -48,6 +48,12 @@
   }
 }
 
+@utility text-gold-gradient {
+  background-image: linear-gradient(to right, #d4af37, #f3c969);
+  background-clip: text;
+  color: transparent;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
