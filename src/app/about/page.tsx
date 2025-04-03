@@ -191,7 +191,7 @@ const About = () => {
               href="/contact"
               className="px-8 py-4 bg-accent text-primary rounded-full font-semibold hover:bg-accent/90 transition-colors"
             >
-              Schedule Your Free Website Consultation
+              Schedule Your Free Consultation
             </Link>
           </div>
         </section>

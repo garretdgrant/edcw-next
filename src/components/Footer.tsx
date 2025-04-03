@@ -1,29 +1,29 @@
 import Link from "next/link";
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "Services",
-      links: ["Web Design", "Development", "SEO", "Maintenance"],
-    },
-    {
-      title: "Company",
-      links: ["About", "Team", "Careers", "Blog"],
-    },
-    {
-      title: "Resources",
-      links: ["Portfolio", "Case Studies", "Testimonials", "Process"],
-    },
-    {
-      title: "Legal",
-      links: ["Privacy", "Terms", "Cookies", "Sitemap"],
-    },
-  ];
+  // const footerSections = [
+  //   {
+  //     title: "Services",
+  //     links: ["Web Design", "Development", "SEO", "Maintenance"],
+  //   },
+  //   {
+  //     title: "Company",
+  //     links: ["About", "Team", "Careers", "Blog"],
+  //   },
+  //   {
+  //     title: "Resources",
+  //     links: ["Portfolio", "Case Studies", "Testimonials", "Process"],
+  //   },
+  //   {
+  //     title: "Legal",
+  //     links: ["Privacy", "Terms", "Cookies", "Sitemap"],
+  //   },
+  // ];
 
   return (
     <footer className="bg-primary text-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="font-semibold mb-4">{section.title}</h3>
@@ -41,7 +41,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/70 text-sm">
@@ -52,7 +52,7 @@ const Footer = () => {
               href="#"
               className="text-white/70 hover:text-white transition-colors"
             >
-              Twitter
+              Facebook
             </Link>
             <Link
               href="#"
