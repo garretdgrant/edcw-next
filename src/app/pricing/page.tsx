@@ -154,7 +154,7 @@ const Pricing = () => {
                           : "bg-primary text-white hover:bg-primary/90"
                       }`}
                     >
-                      <Link href="/your-target-url">{plan.ctaText}</Link>
+                      <Link href="/contact">{plan.ctaText}</Link>
                     </Button>
                   </CardFooter>
                 </Card>
