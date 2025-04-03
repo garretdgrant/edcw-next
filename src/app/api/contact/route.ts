@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "info@ogden-construction.com",
+      from: "leads@edcwebdesign.com",
       to: "garret.grant.swe@gmail.com",
       subject: `🚨 NEW WEBSITE LEAD: Message from ${name} via Website Contact Form`,
       html: `
