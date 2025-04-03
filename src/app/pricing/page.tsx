@@ -138,13 +138,14 @@ const Pricing = () => {
 
                   <CardFooter className="pt-4">
                     <Button
+                      asChild
                       className={`w-full ${
                         plan.popular
                           ? "bg-accent text-primary hover:bg-accent/90"
                           : "bg-primary text-white hover:bg-primary/90"
                       }`}
                     >
-                      {plan.ctaText}
+                      <Link href="/your-target-url">{plan.ctaText}</Link>
                     </Button>
                   </CardFooter>
                 </Card>
