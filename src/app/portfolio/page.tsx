@@ -1,5 +1,99 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Portfolio | See Recent Projects by EDC Web Design",
+    description:
+      "Explore custom websites designed by EDC Web Design for local businesses in Placerville, Folsom, El Dorado Hills, and beyond. Built to convert, rank, and perform.",
+    alternates: {
+      canonical: "https://www.edcwebdesign.com/portfolio",
+    },
+    openGraph: {
+      title: "EDC Web Design Portfolio | Small Business Websites That Work",
+      description:
+        "Take a look at websites we've built for small businesses across El Dorado County. Fast, mobile-friendly, and optimized for results.",
+      url: "https://www.edcwebdesign.com/portfolio",
+      siteName: "EDC Web Design",
+      type: "website",
+      images: ["/assets/logo.webp"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "EDC Web Design Portfolio",
+      description:
+        "Recent projects designed for small businesses in Placerville, Cameron Park, Folsom, and beyond. Built for SEO, speed, and success.",
+      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+    },
+    other: {
+      "script:ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.edcwebdesign.com/#localbusiness",
+        name: "EDC Web Design",
+        url: "https://www.edcwebdesign.com",
+        email: "garret@edcwebdesign.com",
+        telephone: "+15303917473",
+        serviceType: [
+          "Website Design",
+          "SEO Optimization",
+          "Custom Development",
+        ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+1-530-391-7473",
+          contactType: "Customer Support",
+          areaServed: ["US"],
+          availableLanguage: ["English"],
+        },
+        hasMap: "https://www.google.com/maps/place/Placerville,+CA",
+        founder: {
+          "@type": "Person",
+          name: "Garret Grant",
+          url: "https://www.edcwebdesign.com",
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Placerville",
+          addressRegion: "CA",
+          postalCode: "95667",
+          addressCountry: "US",
+        },
+        areaServed: [
+          { "@type": "Place", name: "Placerville" },
+          { "@type": "Place", name: "Tahoe" },
+          { "@type": "Place", name: "Folsom" },
+          { "@type": "Place", name: "El Dorado Hills" },
+          { "@type": "Place", name: "Cameron Park" },
+        ],
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        ],
+        description:
+          "Browse a selection of websites built by EDC Web Design for small businesses. Each site is crafted to load fast, rank well, and generate quality leads.",
+        sameAs: [
+          "https://instagram.com/garret.grant",
+          "https://facebook.com/garret.d.grant",
+        ],
+        image: "https://www.edcwebdesign.com/assets/logo.webp",
+      }),
+    },
+  };
+}
 
 const Portfolio = () => {
   const portfolioItems = [
