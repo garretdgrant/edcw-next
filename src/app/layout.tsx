@@ -15,9 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "Custom Web Design for Small Businesses | EDC Web Design",
     description:
       "EDC Web Design creates SEO-optimized websites for small businesses in Placerville, Folsom, and nearby cities—helping you grow online and win more customers.",

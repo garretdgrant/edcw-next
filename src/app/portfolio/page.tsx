@@ -2,8 +2,14 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "Portfolio | See Recent Projects by EDC Web Design",
     description:
       "Explore custom websites designed by EDC Web Design for local businesses in Placerville, Folsom, El Dorado Hills, and beyond. Built to convert, rank, and perform.",

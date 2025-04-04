@@ -13,8 +13,14 @@ import {
 import Link from "next/link";
 import { Metadata } from "next";
 
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "Website Pricing | Affordable Plans for Small Businesses",
     description:
       "See transparent website pricing from EDC Web Design. Choose from affordable plans built for small businesses in Placerville, El Dorado Hills, Folsom, and nearby areas.",

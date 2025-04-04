@@ -4,8 +4,14 @@ import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import { Metadata } from "next";
 
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "Contact EDC Web Design | Local Web Design for Small Businesses",
     description:
       "Reach out to EDC Web Design, we build fast, modern websites for small businesses in Placerville, Folsom, and surrounding areas.",

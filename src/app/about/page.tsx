@@ -2,8 +2,14 @@ import { Award, Clock, Users } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "About EDC Web Design | Built by a Local Developer You Can Trust",
     description:
       "Learn more about EDC Web Design — founded by Garret Grant, a local web developer passionate about helping small businesses succeed online with fast, modern websites.",

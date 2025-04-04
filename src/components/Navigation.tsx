@@ -1,22 +1,24 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuTrigger,
-// } from "./ui/dropdown-menu";
-// import { ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
 
 const Navigation = () => {
   const locations = [
-    "Sacramento",
-    "Lake Tahoe",
-    "San Francisco",
-    "San Jose",
+    // will need refactoring if more states are added later
+    "Placerville",
+    "El Dorado Hills",
+    "Folsom",
+    "Auburn",
     "Napa Valley",
+    "Sacramento",
   ];
 
   return (
@@ -62,7 +64,7 @@ const Navigation = () => {
           >
             Pricing
           </Link>
-          {/* <div className="relative">
+          <div className="relative">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-secondary hover:text-primary transition-colors">
                 Locations <ChevronDown className="ml-1 h-4 w-4" />
@@ -75,7 +77,7 @@ const Navigation = () => {
                     className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-xs"
                   >
                     <Link
-                      href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/locations/california/${location.toLowerCase().replace(/\s+/g, "-")}`} // state is hardcoded and will need refactoring if more states added
                       className="w-full"
                     >
                       {location}
@@ -84,7 +86,7 @@ const Navigation = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-          </div> */}
+          </div>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
@@ -97,7 +99,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <MobileNav _locations={locations} />
+        <MobileNav locations={locations} />
       </div>
     </nav>
   );

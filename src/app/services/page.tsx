@@ -13,8 +13,14 @@ import {
 import Link from "next/link";
 import { Metadata } from "next";
 
+const metadataBase =
+  process.env.NODE_ENV === "development"
+    ? new URL("http://localhost:3000")
+    : new URL("https://www.edcwebdesign.com");
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase,
     title: "Web Design & SEO Services | EDC Web Design",
     description:
       "Explore our custom website design, SEO, and development services — made for small businesses in El Dorado County, including Placerville, Folsom, and beyond.",
