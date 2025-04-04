@@ -29,67 +29,131 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://www.edcwebdesign.com/#localbusiness",
-        name: "EDC Web Design",
-        url: "https://www.edcwebdesign.com",
-        email: "garret@edcwebdesign.com",
-        telephone: "+15303917473",
-        serviceType: [
-          "Website Design",
-          "SEO Optimization",
-          "Custom Development",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+1-530-391-7473",
-          contactType: "Customer Support",
-          areaServed: ["US"],
-          availableLanguage: ["English"],
-        },
-        hasMap: "https://www.google.com/maps/place/Placerville,+CA",
-        founder: {
-          "@type": "Person",
-          name: "Garret Grant",
-          url: "https://www.edcwebdesign.com",
-        },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Placerville",
-          addressRegion: "CA",
-          postalCode: "95667",
-          addressCountry: "US",
-        },
-        areaServed: [
-          { "@type": "Place", name: "Placerville" },
-          { "@type": "Place", name: "Tahoe" },
-          { "@type": "Place", name: "Folsom" },
-          { "@type": "Place", name: "El Dorado Hills" },
-          { "@type": "Place", name: "Cameron Park" },
-        ],
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday",
-            ],
-            opens: "00:00",
-            closes: "23:59",
-          },
-        ],
+        "@type": "CollectionPage",
+        "@id": "https://www.edcwebdesign.com/#portfolio",
+        name: "Portfolio | EDC Web Design",
+        url: "https://www.edcwebdesign.com/portfolio",
         description:
           "Browse a selection of websites built by EDC Web Design for small businesses. Each site is crafted to load fast, rank well, and generate quality leads.",
-        sameAs: [
-          "https://instagram.com/garret.grant",
-          "https://facebook.com/garret.d.grant",
+        hasPart: [
+          {
+            "@type": "WebSite",
+            name: "Ogden Construction",
+            url: "https://www.ogden-construction.com",
+            description:
+              "High-performance website for a Placerville-based contractor. Designed to showcase services, boost SEO, and convert visitors into local leads.",
+            image:
+              "https://www.edcwebdesign.com/assets/homepage/construction.webp",
+            about: {
+              "@type": "Organization",
+              name: "Ogden Construction",
+            },
+            creator: {
+              "@type": "LocalBusiness",
+              name: "EDC Web Design",
+              url: "https://www.edcwebdesign.com",
+            },
+          },
+          {
+            "@type": "WebSite",
+            name: "Snow White Cleaning",
+            url: "https://www.snow-white-cleaning.com",
+            description:
+              "Elegant marketing site for a Cameron Park cleaning company. Built to build trust, display pricing, and drive bookings from local homeowners.",
+            image: "https://www.edcwebdesign.com/assets/homepage/cleaning.webp",
+            about: {
+              "@type": "Organization",
+              name: "Snow White Cleaning",
+            },
+            creator: {
+              "@type": "LocalBusiness",
+              name: "EDC Web Design",
+              url: "https://www.edcwebdesign.com",
+            },
+          },
+          {
+            "@type": "WebSite",
+            name: "My Favorite Petsitter",
+            url: "https://www.myfavpetsitter.org",
+            description:
+              "Wholesome, pet-friendly design for a Folsom sitter. Built to highlight services, build trust with testimonials, and simplify booking for busy pet parents.",
+            image:
+              "https://www.edcwebdesign.com/assets/homepage/petsitter.webp",
+            about: {
+              "@type": "Organization",
+              name: "My Favorite Petsitter",
+            },
+            creator: {
+              "@type": "LocalBusiness",
+              name: "EDC Web Design",
+              url: "https://www.edcwebdesign.com",
+            },
+          },
         ],
-        image: "https://www.edcwebdesign.com/assets/logo.webp",
+        mainEntityOfPage: {
+          "@type": "LocalBusiness",
+          "@id": "https://www.edcwebdesign.com/#localbusiness",
+          name: "EDC Web Design",
+          url: "https://www.edcwebdesign.com",
+          email: "garret@edcwebdesign.com",
+          telephone: "+1-530-391-7473",
+          serviceType: [
+            "Website Design",
+            "SEO Optimization",
+            "Custom Development",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+1-530-391-7473",
+            contactType: "Customer Support",
+            areaServed: ["US"],
+            availableLanguage: ["English"],
+          },
+          hasMap: "https://www.google.com/maps/place/Placerville,+CA",
+          founder: {
+            "@type": "Person",
+            name: "Garret Grant",
+            url: "https://www.edcwebdesign.com",
+          },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Placerville",
+            addressRegion: "CA",
+            postalCode: "95667",
+            addressCountry: "US",
+          },
+          areaServed: [
+            { "@type": "Place", name: "Placerville" },
+            { "@type": "Place", name: "Tahoe" },
+            { "@type": "Place", name: "Folsom" },
+            { "@type": "Place", name: "El Dorado Hills" },
+            { "@type": "Place", name: "Cameron Park" },
+          ],
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "00:00",
+              closes: "23:59",
+            },
+          ],
+          description:
+            "EDC Web Design was founded by Garret Grant to help small businesses build SEO-friendly, user-focused websites that stand out online and drive real growth.",
+          sameAs: [
+            "https://instagram.com/garret.grant",
+            "https://facebook.com/garret.d.grant",
+          ],
+          image: "https://www.edcwebdesign.com/assets/logo.webp",
+          priceRange: "$$",
+        },
       }),
     },
   };

@@ -40,68 +40,190 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://www.edcwebdesign.com/#localbusiness",
-        name: "EDC Web Design",
-        url: "https://www.edcwebdesign.com",
-        email: "garret@edcwebdesign.com",
-        telephone: "+15303917473",
-        serviceType: [
-          "Website Design",
-          "SEO Optimization",
-          "Custom Development",
-        ],
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+1-530-391-7473",
-          contactType: "Customer Support",
-          areaServed: ["US"],
-          availableLanguage: ["English"],
-        },
-        hasMap: "https://www.google.com/maps/place/Placerville,+CA",
-        founder: {
-          "@type": "Person",
-          name: "Garret Grant",
+        "@type": "WebPage",
+        "@id": "https://www.edcwebdesign.com/#services",
+        name: "Services | EDC Web Design",
+        url: "https://www.edcwebdesign.com/services",
+        description:
+          "EDC Web Design offers a full suite of web services tailored for small businesses — including responsive design, SEO, branding, analytics, and custom development.",
+        mainEntityOfPage: {
+          "@type": "LocalBusiness",
+          "@id": "https://www.edcwebdesign.com/#localbusiness",
+          name: "EDC Web Design",
           url: "https://www.edcwebdesign.com",
+          email: "garret@edcwebdesign.com",
+          telephone: "+1-530-391-7473",
+          serviceType: [
+            "Website Design",
+            "SEO Optimization",
+            "Custom Development",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+1-530-391-7473",
+            contactType: "Customer Support",
+            areaServed: ["US"],
+            availableLanguage: ["English"],
+          },
+          hasMap: "https://www.google.com/maps/place/Placerville,+CA",
+          founder: {
+            "@type": "Person",
+            name: "Garret Grant",
+            url: "https://www.edcwebdesign.com",
+          },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Placerville",
+            addressRegion: "CA",
+            postalCode: "95667",
+            addressCountry: "US",
+          },
+          areaServed: [
+            { "@type": "Place", name: "Placerville" },
+            { "@type": "Place", name: "Tahoe" },
+            { "@type": "Place", name: "Folsom" },
+            { "@type": "Place", name: "El Dorado Hills" },
+            { "@type": "Place", name: "Cameron Park" },
+          ],
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "00:00",
+              closes: "23:59",
+            },
+          ],
+          description:
+            "EDC Web Design helps small businesses build SEO-friendly, user-focused websites that stand out online and drive real growth.",
+          sameAs: [
+            "https://instagram.com/garret.grant",
+            "https://facebook.com/garret.d.grant",
+          ],
+          image: "https://www.edcwebdesign.com/assets/logo.webp",
+          priceRange: "$$",
         },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Placerville",
-          addressRegion: "CA",
-          postalCode: "95667",
-          addressCountry: "US",
-        },
-        areaServed: [
-          { "@type": "Place", name: "Placerville" },
-          { "@type": "Place", name: "Tahoe" },
-          { "@type": "Place", name: "Folsom" },
-          { "@type": "Place", name: "El Dorado Hills" },
-          { "@type": "Place", name: "Cameron Park" },
-        ],
-        openingHoursSpecification: [
+        hasPart: [
           {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday",
+            "@type": "Service",
+            name: "Website Design & Development",
+            description:
+              "Modern websites tailored to your brand — from high-performing single-page sites to full five-page builds.",
+            serviceType: "Website Design",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
             ],
-            opens: "00:00",
-            closes: "23:59",
+          },
+          {
+            "@type": "Service",
+            name: "Search Engine Optimization",
+            description:
+              "Get found on Google with practical, local SEO strategies that help real customers discover your business.",
+            serviceType: "SEO Optimization",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Website Setup & Launch Support",
+            description:
+              "Launch-ready support including domains, email, hosting, SSL, and more.",
+            serviceType: "Website Setup",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Custom Development",
+            description:
+              "Technical web solutions including APIs, databases, and custom app logic.",
+            serviceType: "Custom Development",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Analytics & Reporting",
+            description:
+              "Track your traffic, conversions, and performance with easy-to-understand reports.",
+            serviceType: "Analytics & Reporting",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Website Maintenance",
+            description:
+              "Keep your site secure and running smoothly with ongoing maintenance and updates.",
+            serviceType: "Website Maintenance",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Mobile App Design",
+            description:
+              "Clean, scalable mobile app design aligned with your brand and UX goals.",
+            serviceType: "Mobile App Design",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
+          },
+          {
+            "@type": "Service",
+            name: "Branding & Identity",
+            description:
+              "Professional logos and visual identity packages that reflect your business personality.",
+            serviceType: "Branding & Identity",
+            areaServed: [
+              "Placerville",
+              "Folsom",
+              "Tahoe",
+              "El Dorado Hills",
+              "Cameron Park",
+            ],
           },
         ],
-        description:
-          "EDC Web Design offers a full suite of web services tailored for small businesses — including responsive design, SEO, and ongoing development support.",
-        sameAs: [
-          "https://instagram.com/garret.grant",
-          "https://facebook.com/garret.d.grant",
-        ],
-        image: "https://www.edcwebdesign.com/assets/logo.webp",
-        priceRange: "$$",
       }),
     },
   };
