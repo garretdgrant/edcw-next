@@ -45,7 +45,7 @@ const MobileNav = ({ locations }: MobileNavProps) => {
                 {locations.map((location) => (
                   <Link
                     key={location}
-                    href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}
+                    href={`/locations/california/${location.toLowerCase().replace(/\s+/g, "-")}`}
                     className="text-secondary hover:text-primary"
                     onClick={() => setIsOpen(false)}
                   >
