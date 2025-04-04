@@ -6,43 +6,59 @@ import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Contact EDC Web Design | El Dorado County Web Designer",
+    title: "Contact EDC Web Design | Local Web Design for Small Businesses",
     description:
-      "Get in touch with EDC Web Design. I help small businesses in El Dorado County build fast, modern websites that grow your brand and generate leads.",
+      "Reach out to EDC Web Design — we build fast, modern websites for small businesses in Placerville, Folsom, El Dorado Hills, and surrounding areas.",
     alternates: {
       canonical: "https://www.edcwebdesign.com/contact",
     },
     openGraph: {
-      title: "Contact EDC Web Design | El Dorado County Web Designer",
+      title: "Contact EDC Web Design | Local Web Design for Small Businesses",
       description:
-        "Reach out to a local web designer you can trust. EDC Web Design builds SEO-optimized websites for small businesses in El Dorado County.",
+        "Let's talk about building a website that helps your small business grow. Serving businesses across El Dorado County.",
       url: "https://www.edcwebdesign.com/contact",
       siteName: "EDC Web Design",
       type: "website",
+      images: ["/assets/logo.webp"],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Contact EDC Web Design | El Dorado County Web Designer",
+      title: "Contact EDC Web Design",
       description:
-        "Contact a local, reliable web designer. Serving Placerville, El Dorado Hills, Cameron Park, and nearby areas.",
+        "Custom websites for small businesses in Placerville, Folsom, Cameron Park, and more.",
+      images: ["/assets/logo.webp"],
     },
     other: {
-      // This is how we inject JSON-LD in the <head> manually
       "script:ld+json": JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://www.edcwebdesign.com/#localbusiness",
         name: "EDC Web Design",
         url: "https://www.edcwebdesign.com",
         email: "garret@edcwebdesign.com",
-        telephone: "+1-530-391-7473",
+        telephone: "+15303917473",
+        founder: {
+          "@type": "Person",
+          name: "Garret Grant",
+          url: "https://www.edcwebdesign.com",
+        },
         address: {
-          addressLocality: "El Dorado County",
+          "@type": "PostalAddress",
+          addressLocality: "Placerville",
           addressRegion: "CA",
+          postalCode: "95667",
           addressCountry: "US",
         },
+        areaServed: [
+          { "@type": "Place", name: "Placerville" },
+          { "@type": "Place", name: "Tahoe" },
+          { "@type": "Place", name: "Folsom" },
+          { "@type": "Place", name: "El Dorado Hills" },
+          { "@type": "Place", name: "Cameron Park" },
+        ],
         openingHours: "Mo-Fr 09:00-17:00",
         description:
-          "EDC Web Design helps small businesses in El Dorado County build modern, SEO-friendly websites that generate leads and conversions.",
+          "EDC Web Design helps small businesses build custom, SEO-friendly websites that generate leads and build trust.",
         sameAs: [
           "https://instagram.com/garret.grant",
           "https://facebook.com/garret.d.grant",
@@ -52,6 +68,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+
 const ContactPage = () => {
   return (
     <>
