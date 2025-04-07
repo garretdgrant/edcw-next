@@ -16,6 +16,7 @@ interface BlogPostProps {
   imageUrl: string;
   date: string;
   readTime?: string;
+  slug: string; // routing slug
 }
 
 const BlogPost = ({
@@ -24,6 +25,7 @@ const BlogPost = ({
   imageUrl,
   date,
   readTime,
+  slug,
 }: BlogPostProps) => {
   return (
     <Card className="overflow-hidden flex flex-col h-full border border-border hover:shadow-md transition-shadow">
@@ -44,7 +46,7 @@ const BlogPost = ({
       <CardFooter className="flex justify-between items-center pt-4 border-t">
         {readTime && <span className="text-sm text-secondary">{readTime}</span>}
         <Link
-          href="#"
+          href={`/blog/${slug}`}
           className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
         >
           Read More <ArrowRight size={16} />

@@ -10,47 +10,48 @@ const Blog = () => {
       imageUrl: "https://images.unsplash.com/photo-1481487196290-c152efe083f5",
       date: "June 15, 2024",
       readTime: "8 min read",
+      slug: "web-design-trends-2024",
     },
-    {
-      title: "How to Improve Your Website's Core Web Vitals",
-      excerpt:
-        "Learn practical strategies to enhance your website's performance metrics and provide a better user experience that Google will reward.",
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      date: "May 28, 2024",
-      readTime: "12 min read",
-    },
-    {
-      title: "The Small Business Guide to SEO in 2024",
-      excerpt:
-        "A comprehensive guide for small business owners looking to improve their search engine visibility without breaking the bank.",
-      imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
-      date: "May 12, 2024",
-      readTime: "15 min read",
-    },
-    {
-      title: "Creating Accessible Websites: A Practical Guide",
-      excerpt:
-        "Why accessibility matters and how to implement inclusive design principles that benefit all users while meeting legal requirements.",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      date: "April 25, 2024",
-      readTime: "10 min read",
-    },
-    {
-      title: "The Psychology Behind Effective Landing Pages",
-      excerpt:
-        "Understanding user behavior and implementing psychological principles to create landing pages that convert visitors into customers.",
-      imageUrl: "https://images.unsplash.com/photo-1553484771-371a605b060b",
-      date: "April 10, 2024",
-      readTime: "9 min read",
-    },
-    {
-      title: "Why Website Maintenance is Crucial for Your Business",
-      excerpt:
-        "Understanding the importance of regular website maintenance and how it affects security, performance, and user experience.",
-      imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998",
-      date: "March 22, 2024",
-      readTime: "7 min read",
-    },
+    // {
+    //   title: "How to Improve Your Website's Core Web Vitals",
+    //   excerpt:
+    //     "Learn practical strategies to enhance your website's performance metrics and provide a better user experience that Google will reward.",
+    //   imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    //   date: "May 28, 2024",
+    //   readTime: "12 min read",
+    // },
+    // {
+    //   title: "The Small Business Guide to SEO in 2024",
+    //   excerpt:
+    //     "A comprehensive guide for small business owners looking to improve their search engine visibility without breaking the bank.",
+    //   imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
+    //   date: "May 12, 2024",
+    //   readTime: "15 min read",
+    // },
+    // {
+    //   title: "Creating Accessible Websites: A Practical Guide",
+    //   excerpt:
+    //     "Why accessibility matters and how to implement inclusive design principles that benefit all users while meeting legal requirements.",
+    //   imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    //   date: "April 25, 2024",
+    //   readTime: "10 min read",
+    // },
+    // {
+    //   title: "The Psychology Behind Effective Landing Pages",
+    //   excerpt:
+    //     "Understanding user behavior and implementing psychological principles to create landing pages that convert visitors into customers.",
+    //   imageUrl: "https://images.unsplash.com/photo-1553484771-371a605b060b",
+    //   date: "April 10, 2024",
+    //   readTime: "9 min read",
+    // },
+    // {
+    //   title: "Why Website Maintenance is Crucial for Your Business",
+    //   excerpt:
+    //     "Understanding the importance of regular website maintenance and how it affects security, performance, and user experience.",
+    //   imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+    //   date: "March 22, 2024",
+    //   readTime: "7 min read",
+    // },
   ];
 
   return (
@@ -81,6 +82,7 @@ const Blog = () => {
                   imageUrl={post.imageUrl}
                   date={post.date}
                   readTime={post.readTime}
+                  slug={post.slug}
                 />
               ))}
             </div>
