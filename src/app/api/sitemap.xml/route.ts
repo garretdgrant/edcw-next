@@ -33,7 +33,7 @@ export async function GET(_req: NextRequest) {
     <lastmod>${lastModDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${path === "" ? "1.0" : "0.7"}</priority>
-  </url>`
+  </url>`,
     )
     .join("");
 
@@ -45,7 +45,7 @@ export async function GET(_req: NextRequest) {
     <lastmod>${lastModDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`
+  </url>`,
     )
     .join("");
 

@@ -3,7 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "./ui/sheet";
 import { Menu } from "lucide-react";
 
 interface MobileNavProps {
@@ -21,6 +27,12 @@ const MobileNav = ({ locations }: MobileNavProps) => {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+        <SheetHeader>
+          <SheetTitle className="text-xl font-bold text-center sm:text-left">
+            Main Menu
+          </SheetTitle>
+        </SheetHeader>
+
         <div className="flex flex-col h-full py-6">
           <div className="flex flex-col space-y-4">
             {[
@@ -58,10 +70,10 @@ const MobileNav = ({ locations }: MobileNavProps) => {
 
           <div className="mt-auto">
             <Button
-              className="w-full text-white bg-accent hover:bg-accent/90"
+              className="w-full text-white bg-primary hover:bg-accent/90"
               onClick={() => setIsOpen(false)}
             >
-              Get a Free Quote
+              <Link href="/contact">Get a Free Quote</Link>
             </Button>
           </div>
         </div>
