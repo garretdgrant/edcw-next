@@ -40,6 +40,7 @@ const MobileNav = ({ locations }: MobileNavProps) => {
               { href: "/portfolio", label: "Portfolio" },
               { href: "/about", label: "About" },
               { href: "/pricing", label: "Pricing" },
+              { href: "/blog", label: "Blog" },
             ].map((link) => (
               <Link
                 key={link.href}
