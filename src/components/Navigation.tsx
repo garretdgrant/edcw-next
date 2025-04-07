@@ -91,7 +91,7 @@ const Navigation = () => {
                     className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-sm"
                   >
                     <Link
-                      href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/locations/california/${location.toLowerCase().replace(/\s+/g, "-")}`}
                       className="w-full"
                     >
                       {location}
