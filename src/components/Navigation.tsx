@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import {
@@ -11,8 +14,14 @@ import Image from "next/image";
 import MobileNav from "./MobileNav";
 
 const Navigation = () => {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
   const locations = [
-    // will need refactoring if more states are added later
     "Placerville",
     "El Dorado Hills",
     "Folsom",
@@ -42,48 +51,68 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link
             href="/services"
-            className="text-secondary hover:text-primary transition-colors"
+            className={`${
+              isActive("/services") ? "text-primary" : "text-secondary"
+            } hover:text-primary transition-colors`}
           >
             Services
           </Link>
           <Link
             href="/portfolio"
-            className="text-secondary hover:text-primary transition-colors"
+            className={`${
+              isActive("/portfolio") ? "text-primary" : "text-secondary"
+            } hover:text-primary transition-colors`}
           >
             Portfolio
           </Link>
           <Link
             href="/about"
-            className="text-secondary hover:text-primary transition-colors"
+            className={`${
+              isActive("/about") ? "text-primary" : "text-secondary"
+            } hover:text-primary transition-colors`}
           >
             About
           </Link>
           <Link
             href="/pricing"
-            className="text-secondary hover:text-primary transition-colors"
+            className={`${
+              isActive("/pricing") ? "text-primary" : "text-secondary"
+            } hover:text-primary transition-colors`}
           >
             Pricing
           </Link>
           <div className="relative">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-secondary hover:text-primary transition-colors">
+              <DropdownMenuTrigger
+                className={`flex items-center ${
+                  isActive("/locations") ? "text-primary" : "text-secondary"
+                } hover:text-primary transition-colors`}
+              >
                 Locations <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background shadow-md border border-border rounded-md p-2 w-48">
-                {locations.map((location) => (
-                  <DropdownMenuItem
-                    key={location}
-                    asChild
-                    className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-xs"
-                  >
-                    <Link
-                      href={`/locations/california/${location.toLowerCase().replace(/\s+/g, "-")}`} // state is hardcoded and will need refactoring if more states added
-                      className="w-full"
+                {locations.map((location) => {
+                  const slug = location.toLowerCase().replace(/\s+/g, "-");
+                  const path = `/locations/california/${slug}`;
+                  return (
+                    <DropdownMenuItem
+                      key={location}
+                      asChild
+                      className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-xs"
                     >
-                      {location}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
+                      <Link
+                        href={path}
+                        className={`w-full ${
+                          pathname.startsWith(path)
+                            ? "text-primary"
+                            : "text-foreground"
+                        }`}
+                      >
+                        {location}
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
