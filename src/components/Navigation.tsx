@@ -51,78 +51,66 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link
             href="/services"
-            className={`${
-              isActive("/services") ? "text-primary" : "text-secondary"
-            } hover:text-primary transition-colors`}
+            className={`${isActive("/services") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
           >
             Services
           </Link>
           <Link
             href="/portfolio"
-            className={`${
-              isActive("/portfolio") ? "text-primary" : "text-secondary"
-            } hover:text-primary transition-colors`}
+            className={`${isActive("/portfolio") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
           >
             Portfolio
           </Link>
           <Link
             href="/about"
-            className={`${
-              isActive("/about") ? "text-primary" : "text-secondary"
-            } hover:text-primary transition-colors`}
+            className={`${isActive("/about") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
           >
             About
           </Link>
           <Link
             href="/pricing"
-            className={`${
-              isActive("/pricing") ? "text-primary" : "text-secondary"
-            } hover:text-primary transition-colors`}
+            className={`${isActive("/pricing") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
           >
             Pricing
           </Link>
-          <div className="relative">
+          <div className="relative inline-block">
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`flex items-center ${
-                  isActive("/locations") ? "text-primary" : "text-secondary"
-                } hover:text-primary transition-colors`}
+                className={`flex items-center ${isActive("/locations") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
               >
                 Locations <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background shadow-md border border-border rounded-md p-2 w-48">
-                {locations.map((location) => {
-                  const slug = location.toLowerCase().replace(/\s+/g, "-");
-                  const path = `/locations/california/${slug}`;
-                  return (
-                    <DropdownMenuItem
-                      key={location}
-                      asChild
-                      className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-xs"
+              <DropdownMenuContent
+                className="bg-white shadow-md border border-border rounded-md p-2 w-48 absolute z-50"
+                align="center"
+              >
+                {locations.map((location) => (
+                  <DropdownMenuItem
+                    key={location}
+                    asChild
+                    className="px-4 py-2 cursor-pointer hover:bg-secondary/10 rounded-sm"
+                  >
+                    <Link
+                      href={`/locations/${location.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="w-full"
                     >
-                      <Link
-                        href={path}
-                        className={`w-full ${
-                          pathname.startsWith(path)
-                            ? "text-primary"
-                            : "text-foreground"
-                        }`}
-                      >
-                        {location}
-                      </Link>
-                    </DropdownMenuItem>
-                  );
-                })}
+                      {location}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+          <Link
+            href="/blog"
+            className={`${isActive("/blog") ? "text-primary" : "text-secondary"} hover:text-primary transition-colors`}
+          >
+            Blog
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" className="hidden md:inline-flex" asChild>
-            <Link href="/contact">Contact</Link>
-          </Button>
-          <Button className="text-white" asChild>
+          <Button className="bg-accent text-primary hover:text-accent" asChild>
             <Link href="/contact">Get a Quote</Link>
           </Button>
         </div>
