@@ -4,14 +4,17 @@ import BlogPost from "@/components/BlogPost";
 const Blog = () => {
   const blogPosts = [
     {
-      title: "10 Web Design Trends to Watch in 2024",
+      title:
+        "Why Every Folsom Business Needs a Website (Even If You're Already Busy)",
       excerpt:
-        "Discover the latest design trends that are shaping the web landscape this year, from glassmorphism to variable fonts and micro-interactions.",
-      imageUrl: "https://images.unsplash.com/photo-1481487196290-c152efe083f5",
-      date: "June 15, 2024",
-      readTime: "8 min read",
-      slug: "web-design-trends-2024",
+        "Folsom is full of hard-working business owners—but if you don't have a website, you're missing out. Here's why a great site builds trust, brings leads, and works while you sleep.",
+      imageUrl:
+        "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
+      date: "April 8, 2025",
+      readTime: "6 min read",
+      slug: "folsom-business-website",
     },
+
     // {
     //   title: "How to Improve Your Website's Core Web Vitals",
     //   excerpt:

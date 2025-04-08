@@ -11,7 +11,10 @@ const staticPages = [
   "/portfolio",
   "/about",
   "/contact",
+  "/blog",
 ];
+
+const blogs = ["/folsom-business-website"];
 
 const cities = [
   "placerville",
@@ -40,11 +43,23 @@ export async function GET(_req: NextRequest) {
   const locationPages = cities
     .map(
       (city) => `
+      <url>
+      <loc>${baseUrl}/locations/california/${city}</loc>
+      <lastmod>${lastModDate}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      </url>`,
+    )
+    .join("");
+
+  const blogPages = blogs
+    .map(
+      (path) => `
   <url>
-    <loc>${baseUrl}/locations/california/${city}</loc>
+    <loc>${baseUrl}/blog${path}</loc>
     <lastmod>${lastModDate}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>${path === "" ? "1.0" : "0.7"}</priority>
   </url>`,
     )
     .join("");
@@ -53,6 +68,7 @@ export async function GET(_req: NextRequest) {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urls}
     ${locationPages}
+    ${blogPages}
   </urlset>`;
 
   return new Response(sitemap, {
