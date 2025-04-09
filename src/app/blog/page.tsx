@@ -26,6 +26,17 @@ const Blog = () => {
       readTime: "6 min read",
       slug: "best-website-builder-small-business",
     },
+    {
+      title:
+        "Why Responsive Web Design Matters for Small Business (And How to Get It Right)",
+      excerpt:
+        "Mobile users now dominate the web—so if your site doesn't adapt, you're losing leads. Here's why responsive design matters and how we build it right.",
+      imageUrl:
+        "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
+      date: "April 10, 2025",
+      readTime: "8 min read",
+      slug: "responsive-web-design",
+    },
     // {
     //   title: "The Small Business Guide to SEO in 2024",
     //   excerpt:

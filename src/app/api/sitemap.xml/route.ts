@@ -17,6 +17,7 @@ const staticPages = [
 const blogs = [
   "/folsom-business-website",
   "/best-website-builder-small-business",
+  "/responsive-web-design",
 ];
 
 const cities = [
