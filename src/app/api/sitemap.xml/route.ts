@@ -14,7 +14,10 @@ const staticPages = [
   "/blog",
 ];
 
-const blogs = ["/folsom-business-website"];
+const blogs = [
+  "/folsom-business-website",
+  "/best-website-builder-small-business",
+];
 
 const cities = [
   "placerville",

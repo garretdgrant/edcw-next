@@ -15,14 +15,17 @@ const Blog = () => {
       slug: "folsom-business-website",
     },
 
-    // {
-    //   title: "How to Improve Your Website's Core Web Vitals",
-    //   excerpt:
-    //     "Learn practical strategies to enhance your website's performance metrics and provide a better user experience that Google will reward.",
-    //   imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    //   date: "May 28, 2024",
-    //   readTime: "12 min read",
-    // },
+    {
+      title:
+        "Best Website Builder for Small Business (And Why Going Custom Might Be Better)",
+      excerpt:
+        "Looking at Wix, Squarespace, and more? Here's an honest breakdown of the top website builders for small business—and why a custom site might be the better investment.",
+      imageUrl:
+        "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
+      date: "April 9, 2025",
+      readTime: "6 min read",
+      slug: "best-website-builder-small-business",
+    },
     // {
     //   title: "The Small Business Guide to SEO in 2024",
     //   excerpt:
