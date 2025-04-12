@@ -37,9 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "How to Make a Website for Free (And Why It Might Cost You Later)",
       description:
         "Free website builders seem great—until you hit limits on speed, SEO, and trust. Find out when it's worth hiring a local pro.",
-      images: [
-        "https://www.edcwebdesign.com/assets/logo.webp",
-      ],
+      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
     },
     other: {
       "script:ld+json": JSON.stringify([
@@ -149,23 +147,24 @@ const HowToMakeWebsiteFree = () => {
           <div className="max-w-3xl mx-auto prose prose-lg">
             <p className="lead text-xl text-secondary mb-8">
               Building a website for free sounds great on the surface — and for
-              some, it’s a great starting point. But if your goal is to grow a
-              business, be found on Google, and look professional online,
-              there’s more to the story.
+              some, it&apos;s a great starting point. But if your goal is to
+              grow a business, be found on Google, and look professional online,
+              there&apos;s more to the story.
             </p>
 
             <p>
-              In this post, we’ll walk through the free options out there, what
-              they’re good for, and why they often fall short when it comes to
-              SEO, speed, and long-term growth. And when you're ready for
-              something custom, we’ll show you a better path forward.
+              In this post, we&apos;ll walk through the free options out there,
+              what they&apos;re good for, and why they often fall short when it
+              comes to SEO, speed, and long-term growth. And when you&apos;re
+              ready for something custom, we&apos;ll show you a better path
+              forward.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-6">
               Can You Really Make a Website for Free?
             </h2>
 
-            <p>Yes — here’s how most people do it:</p>
+            <p>Yes — here&apos;s how most people do it:</p>
 
             <ul className="list-disc pl-6 mt-4 mb-6">
               <li>
@@ -185,15 +184,15 @@ const HowToMakeWebsiteFree = () => {
             <p>
               These tools are great for getting something live quickly — a
               personal blog, a resume site, or even a basic landing page. But if
-              you're serious about showing up in search results or converting
-              visitors into leads, keep reading.
+              you&apos;re serious about showing up in search results or
+              converting visitors into leads, keep reading.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-6">
               The Hidden Tradeoffs of Free Website Builders
             </h2>
 
-            <p>Most people hit a wall pretty quickly. Here’s why:</p>
+            <p>Most people hit a wall pretty quickly. Here&apos;s why:</p>
 
             <ul className="list-disc pl-6 mt-4 mb-6">
               <li>
@@ -202,25 +201,25 @@ const HowToMakeWebsiteFree = () => {
                 rankings.
               </li>
               <li>
-                <strong>SEO limitations:</strong> You can’t edit meta tags
+                <strong>SEO limitations:</strong> You can&apos;t edit meta tags
                 properly, structure headings, add schema, or control your
                 sitemap.
               </li>
               <li>
-                <strong>Template lock-in:</strong> You’re stuck working inside
-                someone else’s design framework, even if it doesn’t match your
-                brand.
+                <strong>Template lock-in:</strong> You&apos;re stuck working
+                inside someone else&apos;s design framework, even if it
+                doesn&apos;t match your brand.
               </li>
               <li>
-                <strong>No real support:</strong> If something breaks, you’re on
-                your own unless you upgrade.
+                <strong>No real support:</strong> If something breaks,
+                you&apos;re on your own unless you upgrade.
               </li>
             </ul>
 
             <p>
               For a hobby project, these limits are manageable. But for a real
-              business? It’s like putting a “cheap and temporary” sign on your
-              front door.
+              business? It&apos;s like putting a “cheap and temporary” sign on
+              your front door.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-6">
@@ -277,14 +276,14 @@ const HowToMakeWebsiteFree = () => {
             </ul>
 
             <h2 className="text-2xl font-bold mt-12 mb-6">
-              So What’s the Better Alternative?
+              So What&apos;s the Better Alternative?
             </h2>
 
             <p>
-              You don’t have to choose between “free” and “$10,000 agency site.”
-              At EDC Web Design, we build custom, high-performing websites that
-              are surprisingly affordable — especially when you consider what it
-              could do for your business long-term.
+              You don&apos;t have to choose between “free” and “$10,000 agency
+              site.” At EDC Web Design, we build custom, high-performing
+              websites that are surprisingly affordable — especially when you
+              consider what it could do for your business long-term.
             </p>
 
             <p>
@@ -306,7 +305,7 @@ const HowToMakeWebsiteFree = () => {
             </ul>
 
             <p>
-              And if you’re still on the fence, I offer a{" "}
+              And if you&apos;re still on the fence, I offer a{" "}
               <strong>free custom homepage mockup</strong> — so you can see
               exactly what your site could look like before you spend a dime.
             </p>
@@ -317,9 +316,9 @@ const HowToMakeWebsiteFree = () => {
 
             <p>
               If your goal is just to put something online quickly, a free
-              website might work. But if you’re trying to rank on Google, win
-              over customers, and grow a brand — that free site might actually
-              cost you in the long run.
+              website might work. But if you&apos;re trying to rank on Google,
+              win over customers, and grow a brand — that free site might
+              actually cost you in the long run.
             </p>
 
             <p>
@@ -330,7 +329,7 @@ const HowToMakeWebsiteFree = () => {
               >
                 Reach out for a free homepage mockup
               </Link>{" "}
-              and let’s take your online presence to the next level.
+              and let&apos;s take your online presence to the next level.
             </p>
 
             <p className="mt-10 pt-8 border-t border-border text-secondary">
