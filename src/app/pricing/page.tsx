@@ -145,7 +145,7 @@ const Pricing = () => {
       audience:
         "Ideal for established businesses looking to expand their online reach",
       popular: true,
-      priceText: "600",
+      priceText: "750",
       features: [
         "Multi-page professional website",
         "Content management system",
@@ -161,7 +161,7 @@ const Pricing = () => {
       audience:
         "For businesses with specific needs and advanced functionality requirements",
       popular: false,
-      priceText: "750",
+      priceText: "1000",
       features: [
         "Fully customized design & functionality",
         "E-commerce or membership capabilities",
