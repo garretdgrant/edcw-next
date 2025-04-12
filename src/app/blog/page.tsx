@@ -38,8 +38,7 @@ const Blog = () => {
       slug: "responsive-web-design",
     },
     {
-      title:
-        "How to Make a Website for Free (And Why It Might Cost You Later)",
+      title: "How to Make a Website for Free (And Why It Might Cost You Later)",
       excerpt:
         "Thinking about building your site with Wix or Canva? Here's what to know about free website builders—and when it's worth hiring a pro instead.",
       imageUrl:

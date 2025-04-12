@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       publishedTime: "2025-04-12T08:00:00.000Z",
       images: [
         {
-          url: "https://www.edcwebdesign.com/assets/logo.webp",
+          url: "https://www.edcwebdesign.com/assets/blog/blog_featured.webp",
           width: 1200,
           height: 630,
           alt: "Free Website Builder Concept by EDC Web Design",
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "How to Make a Website for Free (And Why It Might Cost You Later)",
       description:
         "Free website builders seem great—until you hit limits on speed, SEO, and trust. Find out when it's worth hiring a local pro.",
-      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+      images: ["https://www.edcwebdesign.com/assets/blog/blog_featured.webp"],
     },
     other: {
       "script:ld+json": JSON.stringify([
@@ -57,7 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
           },
           image: {
             "@type": "ImageObject",
-            url: "https://www.edcwebdesign.com/assets/logo.webp",
+            url: "https://www.edcwebdesign.com/assets/blog/blog_featured.webp",
             width: 1200,
             height: 630,
           },
