@@ -10,6 +10,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HOMEPAGE_IMAGE_BASE_PATH = "/assets/homepage";
 
@@ -73,9 +74,11 @@ export default function HomePage() {
         {/* Hero Image */}
         <div className="relative mt-16">
           <div className="flex justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            <Image
+              src="https://www.edcwebdesign.com/assets/homepage/workspace.webp"
               alt="Modern web design workspace"
+              width={1941}
+              height={1292}
               className="rounded-3xl shadow-2xl max-w-[90%] w-auto h-auto"
             />
           </div>
@@ -139,9 +142,11 @@ export default function HomePage() {
                 className="rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
               >
                 <div className="h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
+                    height={800}
+                    width={1200}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                   />
                 </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -134,9 +135,11 @@ const BestWebsiteBuilder = () => {
         {/* Featured Image */}
         <div className="w-full max-w-5xl mx-auto -mt-10 px-6">
           <div className="rounded-lg overflow-hidden shadow-xl">
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              alt="Website Builder Options"
+            <Image
+              src="https://www.edcwebdesign.com/assets/blog/blog_featured.webp"
+              alt="Folsom Website Design"
+              width={2426}
+              height={1728}
               className="w-full h-80 object-cover"
             />
           </div>

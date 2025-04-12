@@ -1,6 +1,7 @@
 import { Award, Clock, Users } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 const metadataBase =
   process.env.NODE_ENV === "development"
@@ -163,9 +164,11 @@ const About = () => {
                 </p>
               </div>
               <div className="rounded-xl overflow-hidden">
-                <img
+                <Image
                   src={`${IMAGE_BASE_PATH}/belltower.webp`}
                   alt="Garret working on a website project"
+                  width={990}
+                  height={697}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -227,9 +230,11 @@ const About = () => {
             <div className="grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2">
                 <div className="rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     src={`${IMAGE_BASE_PATH}/founder.webp`}
                     alt="Garret Grant"
+                    width={617}
+                    height={855}
                     className="w-full object-cover"
                   />
                 </div>

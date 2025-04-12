@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 const metadataBase =
   process.env.NODE_ENV === "development"
@@ -502,9 +503,11 @@ const ServicePage = () => {
                   </p>
                   <div className="flex items-center">
                     <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img
+                      <Image
                         src={testimonial.image}
                         alt={testimonial.name}
+                        width={800}
+                        height={800}
                         className="w-full h-full object-cover"
                       />
                     </div>

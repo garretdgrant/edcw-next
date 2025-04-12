@@ -133,10 +133,10 @@ const HowToMakeWebsiteFree = () => {
         <div className="w-full max-w-5xl mx-auto -mt-10 px-6">
           <div className="rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+              src="https://www.edcwebdesign.com/assets/blog/blog_featured.webp"
               alt="Folsom Website Design"
-              width={1280}
-              height={400}
+              width={2426}
+              height={1728}
               className="w-full h-80 object-cover"
             />
           </div>

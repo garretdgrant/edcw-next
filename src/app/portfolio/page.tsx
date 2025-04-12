@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 const metadataBase =
   process.env.NODE_ENV === "development"
@@ -258,9 +259,11 @@ const Portfolio = () => {
                   className="rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all flex flex-col h-full"
                 >
                   <div className="h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      height={800}
+                      width={1200}
                       className="w-full h-full object-cover hover:scale-105 transition-transform"
                     />
                   </div>

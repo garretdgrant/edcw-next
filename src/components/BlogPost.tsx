@@ -9,6 +9,7 @@ import {
 } from "./ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface BlogPostProps {
   title: string;
@@ -30,9 +31,11 @@ const BlogPost = ({
   return (
     <Card className="overflow-hidden flex flex-col h-full border border-border hover:shadow-md transition-shadow">
       <div className="h-48 overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          width={800}
+          height={800}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
