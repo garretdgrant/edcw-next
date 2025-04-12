@@ -57,6 +57,18 @@ export async function GET(_req: NextRequest) {
     )
     .join("");
 
+  const dynamicBlogPages = cities
+    .map(
+      (city) => `
+      <url>
+      <loc>${baseUrl}/blog/best-website-builder-small-business/${city}</loc>
+      <lastmod>${lastModDate}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      </url>`,
+    )
+    .join("");
+
   const blogPages = blogs
     .map(
       (path) => `
@@ -73,6 +85,7 @@ export async function GET(_req: NextRequest) {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urls}
     ${locationPages}
+    ${dynamicBlogPages}
     ${blogPages}
   </urlset>`;
 

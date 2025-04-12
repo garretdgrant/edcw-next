@@ -24,7 +24,7 @@ const Blog = () => {
         "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
       date: "April 9, 2025",
       readTime: "6 min read",
-      slug: "best-website-builder-small-business",
+      slug: "best-website-builder-small-business/folsom",
     },
     {
       title:
