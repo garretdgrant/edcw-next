@@ -18,6 +18,7 @@ const blogs = [
   "/folsom-business-website",
   "/best-website-builder-small-business",
   "/responsive-web-design",
+  "/how-to-make-free-website",
 ];
 
 const cities = [
