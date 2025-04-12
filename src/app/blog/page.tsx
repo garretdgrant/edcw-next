@@ -37,38 +37,17 @@ const Blog = () => {
       readTime: "8 min read",
       slug: "responsive-web-design",
     },
-    // {
-    //   title: "The Small Business Guide to SEO in 2024",
-    //   excerpt:
-    //     "A comprehensive guide for small business owners looking to improve their search engine visibility without breaking the bank.",
-    //   imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
-    //   date: "May 12, 2024",
-    //   readTime: "15 min read",
-    // },
-    // {
-    //   title: "Creating Accessible Websites: A Practical Guide",
-    //   excerpt:
-    //     "Why accessibility matters and how to implement inclusive design principles that benefit all users while meeting legal requirements.",
-    //   imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    //   date: "April 25, 2024",
-    //   readTime: "10 min read",
-    // },
-    // {
-    //   title: "The Psychology Behind Effective Landing Pages",
-    //   excerpt:
-    //     "Understanding user behavior and implementing psychological principles to create landing pages that convert visitors into customers.",
-    //   imageUrl: "https://images.unsplash.com/photo-1553484771-371a605b060b",
-    //   date: "April 10, 2024",
-    //   readTime: "9 min read",
-    // },
-    // {
-    //   title: "Why Website Maintenance is Crucial for Your Business",
-    //   excerpt:
-    //     "Understanding the importance of regular website maintenance and how it affects security, performance, and user experience.",
-    //   imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998",
-    //   date: "March 22, 2024",
-    //   readTime: "7 min read",
-    // },
+    {
+      title:
+        "How to Make a Website for Free (And Why It Might Cost You Later)",
+      excerpt:
+        "Thinking about building your site with Wix or Canva? Here's what to know about free website builders—and when it's worth hiring a pro instead.",
+      imageUrl:
+        "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
+      date: "April 12, 2025",
+      readTime: "7 min read",
+      slug: "how-to-make-free-website",
+    },
   ];
 
   return (
