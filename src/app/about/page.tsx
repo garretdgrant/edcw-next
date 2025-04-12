@@ -23,14 +23,14 @@ export async function generateMetadata(): Promise<Metadata> {
       url: "https://www.edcwebdesign.com/about",
       siteName: "EDC Web Design",
       type: "website",
-      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+      images: ["https://www.edcwebdesign.com/assets/about/garret_head_waterfall.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: "About EDC Web Design",
       description:
         "Get to know Garret Grant — the local web designer behind EDC Web Design, helping small businesses in El Dorado County grow online.",
-      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+      images: ["https://www.edcwebdesign.com/assets/about/garret_head_waterfall.jpg"],
     },
     other: {
       "script:ld+json": JSON.stringify({
@@ -100,7 +100,7 @@ export async function generateMetadata(): Promise<Metadata> {
             "https://instagram.com/garret.grant",
             "https://facebook.com/garret.d.grant",
           ],
-          image: "https://www.edcwebdesign.com/assets/logo.webp",
+          image: "https://www.edcwebdesign.com/assets/about/garret_head_waterfall.jpg",
         },
       }),
     },
