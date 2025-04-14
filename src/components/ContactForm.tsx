@@ -1,7 +1,7 @@
 // components/ContactForm.tsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -42,6 +42,8 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,8 +57,9 @@ const ContactForm = () => {
   });
 
   async function onSubmit(values: FormValues) {
-    // Honeypot check
     if (values.company) return;
+
+    setLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
@@ -70,14 +73,9 @@ const ContactForm = () => {
           company: values.company,
         }),
       });
-      console.log(res);
+
       if (res.ok) {
-        toast({
-          title: "Message Sent!",
-          description:
-            "Thank you for reaching out. We&apos;ll get back to you within 24 hours.",
-        });
-        form.reset();
+        window.location.href = "/thank-you";
       } else {
         const data = await res.json();
         toast({
@@ -95,6 +93,8 @@ const ContactForm = () => {
         variant: "destructive",
       });
       console.error("Form submission error:", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -140,7 +140,6 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="company"
@@ -153,7 +152,6 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="businessName"
@@ -167,7 +165,6 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="message"
@@ -185,12 +182,12 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-
         <Button
           type="submit"
+          disabled={loading}
           className="w-full bg-accent text-black hover:bg-accent/90 cursor-pointer"
         >
-          Send Message
+          {loading ? "Sending..." : "Send Message"}
         </Button>
 
         <div className="space-y-2 pt-2">
