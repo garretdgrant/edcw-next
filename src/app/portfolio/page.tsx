@@ -233,6 +233,17 @@ const Portfolio = () => {
         "Created as a showcase of how an engaging visual design can help increase customer trust, inquiries, and class bookings.",
       companyLink: "https://cakesandclasses.netlify.app",
     },
+    {
+      title: "Tahoe Plumbing Concept",
+      description:
+        "Professional mockup for a South Lake Tahoe plumbing and general contracting company. Built to showcase essential services, establish credibility, and serve as a strong outreach asset.",
+      image:
+        "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Used as a cold outreach mockup to demonstrate how a modern, trust-building site could support service-based lead generation and brand credibility.",
+      companyLink: "https://tahoeplumbing.netlify.app/",
+    },
   ];
 
   return (
