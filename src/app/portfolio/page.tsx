@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Palette, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -198,36 +199,40 @@ const Portfolio = () => {
         "Enabled smooth online scheduling and helped the brand rank locally in Folsom.",
       companyLink: "https://www.myfavpetsitter.org",
     },
-    // {
-    //   title: "Wellness Yoga Studio",
-    //   description:
-    //     "Modern membership website for a community yoga studio in Grass Valley. Includes class scheduling, instructor bios, and integrated online payments for ease of booking.",
-    //   image: "https://images.unsplash.com/photo-1545389336-cf090694435e",
-    //   technologies: ["React", "Tailwind CSS", "WordPress API"],
-    //   outcome:
-    //     "Increased class bookings by 75% and doubled new student sign-ups in the first 60 days.",
-    //   companyLink: "https://www.wellnessyogagv.com",
-    // },
-    // {
-    //   title: "Artisan Bakery",
-    //   description:
-    //     "Charming online storefront for a boutique bakery in Auburn, CA. Built to showcase their menu, enable custom cake orders, and highlight catering services.",
-    //   image: "https://images.unsplash.com/photo-1509440159596-0249088772ff",
-    //   technologies: ["React", "MongoDB", "Express.js"],
-    //   outcome:
-    //     "Catering inquiries grew by 60% within 3 months after launch, leading to recurring event partnerships.",
-    //   companyLink: "https://www.artisanbakeshopca.com",
-    // },
-    // {
-    //   title: "Urban Fitness Club",
-    //   description:
-    //     "Sleek membership portal for a downtown Sacramento gym. Includes class registration, progress tracking, and nutrition planning to engage members digitally.",
-    //   image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
-    //   technologies: ["React", "Node.js", "Chart.js"],
-    //   outcome:
-    //     "Improved member retention by 25% and reduced admin time through self-serve tools.",
-    //   companyLink: "https://www.urbanfitclub.com",
-    // },
+  ];
+
+  const mockupItems = [
+    {
+      title: "BeastMode Construction",
+      description:
+        "Bold, high-impact landing page for a Placerville-based contractor. Designed to reflect a rugged brand identity while clearly presenting services and encouraging local lead generation.",
+      image: "/assets/mockups/beastmode.webp",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Shared as a cold outreach mockup to demonstrate visual strength, professionalism, and conversion-focused layout.",
+      companyLink: "https://beastmodeconstruction.netlify.app/",
+    },
+    {
+      title: "Natural Bridges Learning",
+      description:
+        "Therapeutic support mockup for a wellness-focused education company. Designed to convey warmth, trust, and professionalism for families seeking help with behavioral and emotional development.",
+      image:
+        "https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?q=80&w=2152&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Presented as a mockup to demonstrate how a calming, informative site can inspire trust and better communicate the mission of a child- and family-focused service.",
+      companyLink: "https://naturalbridgeslearning.netlify.app/",
+    },
+    {
+      title: "Cakes and Classes",
+      description:
+        "Playful and inviting landing page for a Placerville-based cake artist offering custom desserts and baking classes. Focused on building emotional connection and showcasing offerings with warmth.",
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Created as a showcase of how an engaging visual design can help increase customer trust, inquiries, and class bookings.",
+      companyLink: "https://cakesandclasses.netlify.app",
+    },
   ];
 
   return (
@@ -243,8 +248,9 @@ const Portfolio = () => {
               </span>
             </h1>
             <p className="max-w-2xl text-lg text-secondary mb-12">
-              Take a look at the websites we’ve built for real small businesses
-              — each project is designed for performance, trust, and growth.
+              Take a look at the websites we&apos;ve built for real small
+              businesses — each project is designed for performance, trust, and
+              growth.
             </p>
           </div>
         </section>
@@ -301,6 +307,95 @@ const Portfolio = () => {
                         target="_blank"
                       >
                         View Website <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="relative py-12">
+          <div className="absolute inset-0 flex items-center px-6 lg:px-8">
+            <div className="w-full border-t border-border"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <div className="bg-background px-6 py-3">
+              <h2 className="text-2xl font-semibold text-primary flex items-center gap-2">
+                <Palette className="w-5 h-5 text-accent" />
+                Mockups & Concepts
+              </h2>
+            </div>
+          </div>
+          <div className="text-center mt-4 px-6 lg:px-8">
+            <p className="text-secondary max-w-2xl mx-auto">
+              Creative previews designed to showcase layout, branding, or
+              outreach ideas.
+            </p>
+          </div>
+        </div>
+
+        {/* Mockups Section */}
+        <section className="px-6 lg:px-8 pb-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mockupItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all flex flex-col h-full bg-secondary/5"
+                >
+                  <div className="h-48 overflow-hidden relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      height={800}
+                      width={1200}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform"
+                    />
+                    <Badge
+                      variant="secondary"
+                      className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm"
+                    >
+                      <Sparkles className="w-3 h-3 mr-1" />
+                      Concept
+                    </Badge>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
+                    <p className="text-secondary mb-4">{item.description}</p>
+
+                    <div className="mt-auto">
+                      <div className="mb-4">
+                        <h4 className="font-medium text-sm text-primary mb-2">
+                          Technologies Used:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {item.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="inline-block px-2 py-1 text-xs bg-background border border-border rounded-full"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="mb-4">
+                        <h4 className="font-medium text-sm text-primary mb-2">
+                          Concept Highlights:
+                        </h4>
+                        <p className="text-secondary text-sm">{item.outcome}</p>
+                      </div>
+
+                      <Link
+                        href={item.companyLink}
+                        className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                        target="_blank"
+                      >
+                        View Concept <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
