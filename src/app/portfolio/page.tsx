@@ -244,6 +244,17 @@ const Portfolio = () => {
         "Used as a cold outreach mockup to demonstrate how a modern, trust-building site could support service-based lead generation and brand credibility.",
       companyLink: "https://tahoeplumbing.netlify.app/",
     },
+    {
+      title: "Folsom Landscaping Concept",
+      description:
+        "Clean, professional mockup for a Folsom-based landscaping company. Designed to highlight services like lawn care, hardscaping, planting, and maintenance while building trust and attracting local leads.",
+      image:
+        "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.0.3",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Created as an outreach asset to showcase how a modern website can elevate brand presence and drive service inquiries from local homeowners.",
+      companyLink: "https://folsom-landscaping.netlify.app/",
+    },
   ];
 
   return (
