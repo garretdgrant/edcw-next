@@ -116,14 +116,85 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+function getJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.edcwebdesign.com/#localbusiness",
+    name: "EDC Web Design",
+    url: "https://www.edcwebdesign.com",
+    email: "garret@edcwebdesign.com",
+    telephone: "+15303917473",
+    serviceType: ["Website Design", "SEO Optimization", "Custom Development"],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-530-391-7473",
+      contactType: "Customer Support",
+      areaServed: ["US"],
+      availableLanguage: ["English"],
+    },
+    hasMap: "https://www.google.com/maps/place/Folsom,+CA",
+    founder: {
+      "@type": "Person",
+      name: "Garret Grant",
+      url: "https://www.edcwebdesign.com",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Folsom",
+      addressRegion: "CA",
+      postalCode: "95630",
+      addressCountry: "US",
+    },
+    areaServed: [
+      { "@type": "Place", name: "Placerville" },
+      { "@type": "Place", name: "Tahoe" },
+      { "@type": "Place", name: "Folsom" },
+      { "@type": "Place", name: "El Dorado Hills" },
+      { "@type": "Place", name: "Cameron Park" },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
+    description:
+      "EDC Web Design creates SEO-friendly, custom websites for small businesses in the El Dorado County area. Our goal is to help you stand out online and convert traffic into leads.",
+    sameAs: [
+      "https://instagram.com/garret.grant",
+      "https://facebook.com/garret.d.grant",
+    ],
+    image: "https://www.edcwebdesign.com/assets/logo.webp",
+    priceRange: "$$",
+  };
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const jsonLd = getJsonLd();
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
+        <Script
+          id="localbusiness-jsonld"
+          type="application/ld+json"
+          strategy="beforeInteractive" // ← KEY: SSR-compatible
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {/* Google Ads Global Site Tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17005186129"
