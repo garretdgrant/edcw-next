@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 const formatCityName = (slug: string): string => {
   return slug
@@ -99,12 +100,13 @@ export default async function LocationPage({ params }: Props) {
 
   return (
     <>
-      <script
+      <Script
+        id="localbusiness-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
+        strategy="beforeInteractive" // ← KEY: SSR-compatible
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* <JsonLd jsonLd={jsonLd}/> */}
       <div>
         <div className="pt-24 pb-16">
           <section className="max-w-7xl mx-auto px-6 py-16 text-center">
