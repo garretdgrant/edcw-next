@@ -15,7 +15,7 @@ type Props = {
   params: Promise<{ city: string }>;
 };
 
-export function getCityJsonLd(city: string, cityName: string): any {
+function getCityJsonLd(city: string, cityName: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
