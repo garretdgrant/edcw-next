@@ -18,21 +18,27 @@ type Props = {
 function getCityJsonLd(city: string, cityName: string) {
   return {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://www.edcwebdesign.com/locations/california/${city}`,
-    name: `Web Design in ${cityName} | EDC Web Design`,
+    "@type": "LocalBusiness",
+    "@id": `https://www.edcwebdesign.com/locations/california/${city}#localbusiness`,
+    name: `EDC Web Design – ${cityName}`,
     url: `https://www.edcwebdesign.com/locations/california/${city}`,
-    description: `EDC Web Design offers custom websites tailored for small businesses in ${cityName}. Get fast, responsive designs that attract and convert local customers.`,
+    description: `EDC Web Design creates high-performance websites for small businesses in ${cityName}, optimized for SEO, conversions, and mobile devices.`,
+    areaServed: {
+      "@type": "Place",
+      name: `${cityName}, CA`,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: cityName,
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
     hasMap: `https://www.google.com/maps/search/${encodeURIComponent(cityName + ", CA")}`,
-    about: {
-      "@type": "Thing",
-      name: `${cityName} Web Design`,
-      description: `Affordable, modern websites for small businesses in ${cityName}, built to perform and generate leads.`,
-    },
-    mainEntityOfPage: {
-      "@type": "LocalBusiness",
-      "@id": "https://www.edcwebdesign.com/#localbusiness",
-    },
+    priceRange: "$$",
+    sameAs: [
+      "https://www.instagram.com/edcwebdesign",
+      "https://www.facebook.com/edcwebdesign",
+    ],
   };
 }
 
@@ -106,7 +112,6 @@ export default async function LocationPage({ params }: Props) {
         strategy="beforeInteractive" // ← KEY: SSR-compatible
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* <JsonLd jsonLd={jsonLd}/> */}
       <div>
         <div className="pt-24 pb-16">
           <section className="max-w-7xl mx-auto px-6 py-16 text-center">
