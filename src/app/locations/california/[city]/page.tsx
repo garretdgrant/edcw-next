@@ -34,6 +34,7 @@ function getCityJsonLd(city: string, cityName: string) {
       addressLocality: cityName,
       addressRegion: "CA",
       addressCountry: "US",
+      postalCode: '95672'
     },
     hasMap: `https://www.google.com/maps/search/${encodeURIComponent(cityName + ", CA")}`,
     priceRange: "$$",
