@@ -23,6 +23,8 @@ function getCityJsonLd(city: string, cityName: string) {
     name: `EDC Web Design – ${cityName}`,
     url: `https://www.edcwebdesign.com/locations/california/${city}`,
     description: `EDC Web Design creates high-performance websites for small businesses in ${cityName}, optimized for SEO, conversions, and mobile devices.`,
+    telephone: "+1-916-555-1234",
+    image: "https://www.edcwebdesign.com/assets/logo.webp",
     areaServed: {
       "@type": "Place",
       name: `${cityName}, CA`,
