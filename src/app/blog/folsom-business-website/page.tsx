@@ -166,16 +166,15 @@ function getJsonLd() {
   ];
 }
 
-
 const FolsomBusinessWebsite = () => {
   return (
     <div className="min-h-screen bg-background">
       <Script
-  id="jsonld-blog-folsom-business-website"
-  type="application/ld+json"
-  strategy="beforeInteractive"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd()) }}
-/>
+        id="jsonld-blog-folsom-business-website"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd()) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-primary/95 text-white py-20 px-6">
