@@ -1,5 +1,63 @@
 import React from "react";
 import BlogPost from "@/components/BlogPost";
+import { Metadata } from "next";
+import Script from "next/script";
+
+function getBlogIndexJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.edcwebdesign.com/blog",
+    name: "Web Design Blog | EDC Web Design",
+    url: "https://www.edcwebdesign.com/blog",
+    description:
+      "Explore expert insights and tips on web design, SEO, and online growth for small businesses in Northern California.",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.edcwebdesign.com/blog",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "EDC Web Design",
+      url: "https://www.edcwebdesign.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.edcwebdesign.com/assets/logo.webp",
+      },
+    },
+  };
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    metadataBase: new URL("https://www.edcwebdesign.com"),
+    title: "Web Design Blog | Tips, SEO, and Small Business Insights",
+    description:
+      "Explore articles about modern web design, SEO, conversion tips, and digital strategies for small businesses in Placerville, Folsom, and beyond.",
+    alternates: {
+      canonical: "https://www.edcwebdesign.com/blog",
+    },
+    openGraph: {
+      title: "Web Design Blog | Tips, SEO, and Small Business Insights",
+      description:
+        "EDC Web Design shares expert advice and digital insights for small business owners in Northern California.",
+      url: "https://www.edcwebdesign.com/blog",
+      siteName: "EDC Web Design",
+      type: "website",
+      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Web Design Blog | EDC Web Design",
+      description:
+        "Tips, trends, and strategies to grow your small business online through smart web design and SEO.",
+      images: ["https://www.edcwebdesign.com/assets/logo.webp"],
+    },
+    other: {
+      "script:ld+json": JSON.stringify(getBlogIndexJsonLd()),
+    },
+  };
+}
 
 const Blog = () => {
   const blogPosts = [
@@ -49,8 +107,16 @@ const Blog = () => {
     },
   ];
 
+  const jsonLd = getBlogIndexJsonLd();
+
   return (
     <div className="min-h-screen bg-background">
+      <Script
+        id="blog-index-jsonld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-primary text-white py-24 px-6">

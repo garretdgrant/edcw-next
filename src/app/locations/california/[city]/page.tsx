@@ -121,9 +121,9 @@ export default async function LocationPage({ params }: Props) {
   return (
     <>
       <Script
-        id="localbusiness-jsonld"
+        id={`jsonld-localbusiness-${city}`}
         type="application/ld+json"
-        strategy="beforeInteractive" // ← KEY: SSR-compatible
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div>
