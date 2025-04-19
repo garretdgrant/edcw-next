@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -103,9 +104,78 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+function getJsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: "Why Every Folsom Business Needs a Website",
+      description:
+        "Learn why every Folsom business needs a website to succeed in 2025. This blog explains how a site helps with trust, visibility, and growth.",
+      datePublished: "2025-04-08T08:00:00-07:00",
+      dateModified: "2025-04-08T08:00:00-07:00",
+      author: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        url: "https://www.edcwebdesign.com",
+      },
+      image: {
+        "@type": "ImageObject",
+        url: "https://www.edcwebdesign.com/assets/locations/california/folsom.webp",
+        width: 1200,
+        height: 630,
+      },
+      mainEntityOfPage: {
+        "@type": "LocalBusiness",
+        "@id": "https://www.edcwebdesign.com/#localbusiness",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.edcwebdesign.com/assets/logo.webp",
+        },
+      },
+      url: "https://www.edcwebdesign.com/blog/folsom-business-website",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.edcwebdesign.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://www.edcwebdesign.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Why Every Folsom Business Needs a Website",
+          item: "https://www.edcwebdesign.com/blog/folsom-business-website",
+        },
+      ],
+    },
+  ];
+}
+
+
 const FolsomBusinessWebsite = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Script
+  id="jsonld-blog-folsom-business-website"
+  type="application/ld+json"
+  strategy="beforeInteractive"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd()) }}
+/>
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-primary/95 text-white py-20 px-6">

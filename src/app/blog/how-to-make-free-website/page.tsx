@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -39,74 +40,81 @@ export async function generateMetadata(): Promise<Metadata> {
         "Free website builders seem great—until you hit limits on speed, SEO, and trust. Find out when it's worth hiring a local pro.",
       images: ["https://www.edcwebdesign.com/assets/blog/blog_featured.webp"],
     },
-    other: {
-      "script:ld+json": JSON.stringify([
-        {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline:
-            "How to Make a Website for Free (And Why It Might Cost You Later)",
-          description:
-            "Free website builders can work in a pinch—but they come with limitations. Here's what you need to know before trusting your business to a free solution.",
-          datePublished: "2025-04-12",
-          dateModified: "2025-04-12",
-          author: {
-            "@type": "Organization",
-            name: "EDC Web Design",
-            url: "https://www.edcwebdesign.com",
-          },
-          image: {
-            "@type": "ImageObject",
-            url: "https://www.edcwebdesign.com/assets/blog/blog_featured.webp",
-            width: 1200,
-            height: 630,
-          },
-          mainEntityOfPage: {
-            "@type": "LocalBusiness",
-            "@id": "https://www.edcwebdesign.com/#localbusiness",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "EDC Web Design",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://www.edcwebdesign.com/assets/logo.webp",
-            },
-          },
-          url: "https://www.edcwebdesign.com/blog/how-to-make-a-website-for-free",
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.edcwebdesign.com",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Blog",
-              item: "https://www.edcwebdesign.com/blog",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: "How to Make a Website for Free",
-              item: "https://www.edcwebdesign.com/blog/how-to-make-a-website-for-free",
-            },
-          ],
-        },
-      ]),
-    },
   };
+}
+
+function getJsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline:
+        "How to Make a Website for Free (And Why It Might Cost You Later)",
+      description:
+        "Free website builders can work in a pinch—but they come with limitations. Here's what you need to know before trusting your business to a free solution.",
+      datePublished: "2025-04-12T08:00:00-07:00",
+      dateModified: "2025-04-12T08:00:00-07:00",
+      author: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        url: "https://www.edcwebdesign.com",
+      },
+      image: {
+        "@type": "ImageObject",
+        url: "https://www.edcwebdesign.com/assets/blog/blog_featured.webp",
+        width: 1200,
+        height: 630,
+      },
+      mainEntityOfPage: {
+        "@type": "LocalBusiness",
+        "@id": "https://www.edcwebdesign.com/#localbusiness",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.edcwebdesign.com/assets/logo.webp",
+        },
+      },
+      url: "https://www.edcwebdesign.com/blog/how-to-make-a-website-for-free",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.edcwebdesign.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://www.edcwebdesign.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "How to Make a Website for Free",
+          item: "https://www.edcwebdesign.com/blog/how-to-make-a-website-for-free",
+        },
+      ],
+    },
+  ];
 }
 
 const HowToMakeWebsiteFree = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Script
+        id="jsonld-blog-how-to-make-website"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLd()) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-primary/95 text-white py-20 px-6">
