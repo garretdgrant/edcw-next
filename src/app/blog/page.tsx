@@ -6,25 +6,21 @@ import Script from "next/script";
 function getBlogIndexJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://www.edcwebdesign.com/blog",
-    name: "Web Design Blog | EDC Web Design",
-    url: "https://www.edcwebdesign.com/blog",
-    description:
-      "Explore expert insights and tips on web design, SEO, and online growth for small businesses in Northern California.",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": "https://www.edcwebdesign.com/blog",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "EDC Web Design",
-      url: "https://www.edcwebdesign.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.edcwebdesign.com/assets/logo.webp",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.edcwebdesign.com",
       },
-    },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.edcwebdesign.com/blog",
+      },
+    ],
   };
 }
 

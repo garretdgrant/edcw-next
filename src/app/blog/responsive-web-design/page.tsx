@@ -53,8 +53,8 @@ function getJsonLd() {
       headline: "Why Responsive Web Design Matters for Small Business",
       description:
         "Learn why responsive web design is crucial in 2025 for small businesses. This guide breaks down the benefits, pitfalls of builders, and how custom design leads to real growth.",
-      datePublished: "2025-04-10",
-      dateModified: "2025-04-10",
+      datePublished: "2025-04-10T08:00:00-07:00",
+      dateModified: "2025-04-10T08:00:00-07:00",
       author: {
         "@type": "Organization",
         name: "EDC Web Design",
