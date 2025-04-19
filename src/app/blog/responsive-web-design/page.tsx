@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -41,73 +42,81 @@ export async function generateMetadata(): Promise<Metadata> {
         "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
       ],
     },
-    other: {
-      "script:ld+json": JSON.stringify([
-        {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: "Why Responsive Web Design Matters for Small Business",
-          description:
-            "Learn why responsive web design is crucial in 2025 for small businesses. This guide breaks down the benefits, pitfalls of builders, and how custom design leads to real growth.",
-          datePublished: "2025-04-10",
-          dateModified: "2025-04-10",
-          author: {
-            "@type": "Organization",
-            name: "EDC Web Design",
-            url: "https://www.edcwebdesign.com",
-          },
-          image: {
-            "@type": "ImageObject",
-            url: "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
-            width: 1200,
-            height: 630,
-          },
-          mainEntityOfPage: {
-            "@type": "LocalBusiness",
-            "@id": "https://www.edcwebdesign.com/#localbusiness",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "EDC Web Design",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://www.edcwebdesign.com/assets/logo.webp",
-            },
-          },
-          url: "https://www.edcwebdesign.com/blog/responsive-web-design-small-business",
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.edcwebdesign.com",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Blog",
-              item: "https://www.edcwebdesign.com/blog",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: "Why Responsive Web Design Matters for Small Business",
-              item: "https://www.edcwebdesign.com/blog/responsive-web-design-small-business",
-            },
-          ],
-        },
-      ]),
-    },
   };
 }
 
+export function getJsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: "Why Responsive Web Design Matters for Small Business",
+      description:
+        "Learn why responsive web design is crucial in 2025 for small businesses. This guide breaks down the benefits, pitfalls of builders, and how custom design leads to real growth.",
+      datePublished: "2025-04-10",
+      dateModified: "2025-04-10",
+      author: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        url: "https://www.edcwebdesign.com",
+      },
+      image: {
+        "@type": "ImageObject",
+        url: "https://www.edcwebdesign.com/assets/locations/california/sacramento.webp",
+        width: 1200,
+        height: 630,
+      },
+      mainEntityOfPage: {
+        "@type": "LocalBusiness",
+        "@id": "https://www.edcwebdesign.com/#localbusiness",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "EDC Web Design",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.edcwebdesign.com/assets/logo.webp",
+        },
+      },
+      url: "https://www.edcwebdesign.com/blog/responsive-web-design-small-business",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.edcwebdesign.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://www.edcwebdesign.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Why Responsive Web Design Matters for Small Business",
+          item: "https://www.edcwebdesign.com/blog/responsive-web-design-small-business",
+        },
+      ],
+    },
+  ];
+}
+
 const ResponsiveWebDesign = () => {
+  const jsonLd = getJsonLd();
   return (
     <div className="min-h-screen bg-background">
+      <Script
+        id="jsonld-blog-responsive-web-design"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-primary/95 text-white py-20 px-6">
