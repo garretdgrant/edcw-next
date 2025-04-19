@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export function getJsonLd() {
+function getJsonLd() {
   return [
     {
       "@context": "https://schema.org",
