@@ -53,9 +53,6 @@ export async function generateMetadata(): Promise<Metadata> {
         "Tips, trends, and strategies to grow your small business online through smart web design and SEO.",
       images: ["https://www.edcwebdesign.com/assets/logo.webp"],
     },
-    other: {
-      "script:ld+json": JSON.stringify(getBlogIndexJsonLd()),
-    },
   };
 }
 
