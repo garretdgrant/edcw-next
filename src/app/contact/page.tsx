@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import { Metadata } from "next";
+import Script from "next/script";
 
 const metadataBase =
   process.env.NODE_ENV === "development"
@@ -108,10 +109,49 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+function getContactJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://www.edcwebdesign.com/contact",
+    name: "Contact EDC Web Design",
+    url: "https://www.edcwebdesign.com/contact",
+    description:
+      "Get in touch with EDC Web Design. We build SEO-optimized websites for small businesses in Placerville, Folsom, and nearby areas.",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.edcwebdesign.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Contact",
+          item: "https://www.edcwebdesign.com/contact",
+        },
+      ],
+    },
+    mainEntity: {
+      "@type": "Organization",
+      "@id": "https://www.edcwebdesign.com/#localbusiness",
+    },
+  };
+}
 
 const ContactPage = () => {
+  const jsonLd = getContactJsonLd();
   return (
     <>
+      <Script
+        id="jsonld-contact-page"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="flex flex-col min-h-screen">
         <Navigation />
         <div className="flex-1">
