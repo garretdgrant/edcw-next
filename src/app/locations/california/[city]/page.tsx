@@ -11,11 +11,21 @@ const formatCityName = (slug: string): string => {
     .join(" ");
 };
 
+const cityMeta: Record<string, { name: string; postalCode: string }> = {
+  placerville: { name: "Placerville", postalCode: "95667" },
+  "el-dorado-hills": { name: "El Dorado Hills", postalCode: "95762" },
+  folsom: { name: "Folsom", postalCode: "95630" },
+  auburn: { name: "Auburn", postalCode: "95603" },
+  tahoe: { name: "South Lake Tahoe", postalCode: "96150" },
+  "napa-valley": { name: "Napa Valley", postalCode: "94558" },
+  sacramento: { name: "Sacramento", postalCode: "95814" },
+};
+
 type Props = {
   params: Promise<{ city: string }>;
 };
 
-function getCityJsonLd(city: string, cityName: string) {
+function getCityJsonLd(city: string, cityName: string, postalcode: string) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -34,7 +44,7 @@ function getCityJsonLd(city: string, cityName: string) {
       addressLocality: cityName,
       addressRegion: "CA",
       addressCountry: "US",
-      postalCode: "95672",
+      postalCode: `${postalcode}`,
     },
     hasMap: `https://www.google.com/maps/search/${encodeURIComponent(cityName + ", CA")}`,
     priceRange: "$$",
@@ -105,7 +115,8 @@ export async function generateStaticParams(): Promise<{ city: string }[]> {
 export default async function LocationPage({ params }: Props) {
   const { city } = await params;
   const cityName = formatCityName(city);
-  const jsonLd = getCityJsonLd(city, cityName);
+  const postalCode = cityMeta[city]?.postalCode || "00000";
+  const jsonLd = getCityJsonLd(city, cityName, postalCode);
 
   return (
     <>
