@@ -51,18 +51,24 @@ function getPortfolioJsonLd() {
       {
         "@type": "ListItem",
         position: 1,
+        name: "Rose & Sugar",
+        url: "https://www.roseandsugar.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
         name: "Ogden Construction",
         url: "https://www.ogden-construction.com",
       },
       {
         "@type": "ListItem",
-        position: 2,
+        position: 3,
         name: "My Fav Pet Sitter",
         url: "https://www.myfavpetsitter.org",
       },
       {
         "@type": "ListItem",
-        position: 3,
+        position: 4,
         name: "Snow White Cleaning",
         url: "https://snowwhitecleaning.com", // Update if not live
       },
@@ -72,6 +78,17 @@ function getPortfolioJsonLd() {
 
 const Portfolio = () => {
   const portfolioItems = [
+    {
+      title: "Rose & Sugar",
+      description:
+        "Custom marketing and booking hub for a Folsom cookie artist offering bespoke sugar cookies and decorating classes. Designed to showcase intricate sets, capture detailed order specs, and manage upcoming class rosters.",
+      image:
+        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      outcome:
+        "Automated cookie order intake and class signups, saving hours of weekly admin and keeping workshops sold out.",
+      companyLink: "https://www.roseandsugar.com",
+    },
     {
       title: "Ogden Construction",
       description:

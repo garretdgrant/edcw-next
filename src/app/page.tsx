@@ -19,6 +19,14 @@ export default function HomePage() {
 
   const portfolioItems = [
     {
+      title: "Rose & Sugar",
+      description:
+        "Custom site for a Folsom-based cookie artist. Highlights hand-crafted sugar cookies, automates detailed order requests, and keeps decorating classes full with an easy signup flow.",
+      image:
+        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80",
+      companyLink: "https://www.roseandsugar.com",
+    },
+    {
       title: "Ogden Construction",
       description:
         "High-performance website for a Placerville-based general contractor. Designed to showcase services, boost SEO, and convert visitors into local construction leads.",
